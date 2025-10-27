@@ -1,0 +1,18 @@
+[2025-10-27 23:38:38,462] Running step: step_qonnx_to_finn [1/10]
+[2025-10-27 23:38:38,463] Running step: step_tidy_up [2/10]
+[2025-10-27 23:38:38,482] Running step: step_streamline [3/10]
+[2025-10-27 23:38:39,021] /home/changhong/prj/finn_dev/finn/deps/qonnx/src/qonnx/transformation/infer_data_layouts.py:136: UserWarning: Assuming 2D input is NC
+[2025-10-27 23:38:39,021]   warnings.warn("Assuming 2D input is NC")
+[2025-10-27 23:38:39,023] Running step: step_convert_to_hw [4/10]
+[2025-10-27 23:38:39,027] Running step: step_create_dataflow_partition [5/10]
+[2025-10-27 23:38:39,029] Running step: step_specialize_layers [6/10]
+[2025-10-27 23:38:39,032] Running step: step_target_fps_parallelization [7/10]
+[2025-10-27 23:38:39,037] Running step: step_apply_folding_config [8/10]
+[2025-10-27 23:38:39,037] Running step: step_minimize_bit_width [9/10]
+[2025-10-27 23:38:39,039] /home/changhong/prj/finn_dev/finn/src/finn/custom_op/fpgadataflow/matrixvectoractivation.py:492: UserWarning: Clipping some thresholds in MVAU_hls_0
+[2025-10-27 23:38:39,039]   warnings.warn("Clipping some thresholds in %s" % self.onnx_node.name)
+[2025-10-27 23:38:39,050] /home/changhong/prj/finn_dev/finn/src/finn/custom_op/fpgadataflow/matrixvectoractivation.py:492: UserWarning: Clipping some thresholds in MVAU_hls_1
+[2025-10-27 23:38:39,050]   warnings.warn("Clipping some thresholds in %s" % self.onnx_node.name)
+[2025-10-27 23:38:39,051] /home/changhong/prj/finn_dev/finn/src/finn/custom_op/fpgadataflow/matrixvectoractivation.py:492: UserWarning: Clipping some thresholds in MVAU_hls_2
+[2025-10-27 23:38:39,051]   warnings.warn("Clipping some thresholds in %s" % self.onnx_node.name)
+[2025-10-27 23:38:39,054] Running step: step_generate_estimate_reports [10/10]
