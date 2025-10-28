@@ -4,7 +4,7 @@
     "PE": 16,
     "SIMD": 40,
     "ram_style": "auto",
-    "resType": "auto",
+    "resType": "lut",
     "mem_mode": "internal_decoupled",
     "runtime_writeable_weights": 0
   },
@@ -12,7 +12,7 @@
     "PE": 1,
     "SIMD": 64,
     "ram_style": "auto",
-    "resType": "auto",
+    "resType": "lut",
     "mem_mode": "internal_decoupled",
     "runtime_writeable_weights": 0
   },
@@ -20,7 +20,7 @@
     "PE": 1,
     "SIMD": 64,
     "ram_style": "auto",
-    "resType": "auto",
+    "resType": "lut",
     "mem_mode": "internal_decoupled",
     "runtime_writeable_weights": 0
   },
@@ -28,7 +28,7 @@
     "PE": 1,
     "SIMD": 1,
     "ram_style": "auto",
-    "resType": "auto",
+    "resType": "lut",
     "mem_mode": "internal_decoupled",
     "runtime_writeable_weights": 0
   }

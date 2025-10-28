@@ -1,4 +1,4 @@
 #!/bin/bash 
-cd /tmp/finn_dev_root/vivado_stitch_proj_hxa7iyde
+cd /tmp/finn_dev_changhong/vivado_stitch_proj_008s7qic
 vivado -mode batch -source make_project.tcl
-cd /home/changhong/prj/finn_dev/finn/script/DAC2026
+cd /home/changhong/prj/finn/script/DAC2026

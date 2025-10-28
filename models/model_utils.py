@@ -50,7 +50,7 @@ def test_unsw_padded_bipolar(model, test_loader, device):
 def save_padded_unsw_model(old_ckpt_path, new_ckpt_path, w=2, a=2):
     # 1) 加载旧模型 + state_dict（含参数+buffers）
     old_model = get_model("unsw_nb15", w, a).cpu()
-    old_sd = torch.load(old_ckpt_path)["models_state_dict"][0]
+    old_sd = torch.load(old_ckpt_path, weights_only=False)["models_state_dict"][0]
     old_model.load_state_dict(old_sd, strict=True)
 
     # 2) 基于旧 state_dict 复制出一个新 state_dict

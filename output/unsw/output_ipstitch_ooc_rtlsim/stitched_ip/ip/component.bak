@@ -242,9 +242,6 @@
           <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_MVAU_hls_0_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagesynthesis_amd_com_finn_memstream_1_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_MVAU_hls_1_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
@@ -259,7 +256,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>af63a2af</spirit:value>
+            <spirit:value>0cdb4a17</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -271,9 +268,6 @@
         <spirit:modelName>finn_design</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_MVAU_hls_0_1_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagebehavioralsimulation_amd_com_finn_memstream_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_MVAU_hls_1_1_0__ref_view_fileset</spirit:localName>
@@ -290,34 +284,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>20877a2f</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
-        <spirit:name>xilinx_implementation</spirit:name>
-        <spirit:displayName>Implementation</spirit:displayName>
-        <spirit:envIdentifier>:vivado.xilinx.com:implementation</spirit:envIdentifier>
-        <spirit:modelName>finn_design</spirit:modelName>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_implementation_xilinx_com_hls_MVAU_hls_0_1_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_implementation_amd_com_finn_memstream_1_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_implementation_xilinx_com_hls_MVAU_hls_1_1_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_implementation_xilinx_com_hls_MVAU_hls_2_1_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_implementation_xilinx_com_hls_MVAU_hls_3_1_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>40c3d016</spirit:value>
+            <spirit:value>818f34a0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -490,10 +457,25 @@
         <spirit:userFileType>CELL_NAME_MVAU_hls_0/MVAU_hls_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_design_MVAU_hls_0_wstrm_0/finn_design_MVAU_hls_0_wstrm_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_3/axilite.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_3/memstream.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_3/memstream_axi.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_0/MVAU_hls_0_memstream_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/finn_design_MVAU_hls_0_wstrm_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_MVAU_hls_0/MVAU_hls_0_wstrm</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/StreamingFIFO_rtl_1.v</spirit:name>
@@ -542,10 +524,13 @@
         <spirit:userFileType>CELL_NAME_MVAU_hls_1/MVAU_hls_1</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_design_MVAU_hls_1_wstrm_0/finn_design_MVAU_hls_1_wstrm_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_1/MVAU_hls_1_memstream_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/finn_design_MVAU_hls_1_wstrm_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_MVAU_hls_1/MVAU_hls_1_wstrm</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/StreamingFIFO_rtl_3.v</spirit:name>
@@ -584,10 +569,13 @@
         <spirit:userFileType>CELL_NAME_MVAU_hls_2/MVAU_hls_2</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_design_MVAU_hls_2_wstrm_0/finn_design_MVAU_hls_2_wstrm_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_2/MVAU_hls_2_memstream_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/finn_design_MVAU_hls_2_wstrm_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_MVAU_hls_2/MVAU_hls_2_wstrm</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/StreamingFIFO_rtl_5.v</spirit:name>
@@ -606,10 +594,13 @@
         <spirit:userFileType>CELL_NAME_MVAU_hls_3/MVAU_hls_3</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_design_MVAU_hls_3_wstrm_0/finn_design_MVAU_hls_3_wstrm_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_3/MVAU_hls_3_memstream_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/finn_design_MVAU_hls_3_wstrm_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_MVAU_hls_3/MVAU_hls_3_wstrm</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/StreamingFIFO_rtl_6.v</spirit:name>
@@ -631,7 +622,7 @@
       <spirit:file>
         <spirit:name>src/finn_design.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_066f24a3</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_126cdb7f</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -640,16 +631,6 @@
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
           <xilinx:componentRef xsi:type="xilinx:componentRefType" xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="MVAU_hls_0" xilinx:version="1.0">
-            <xilinx:mode xilinx:name="create_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_anylanguagesynthesis_amd_com_finn_memstream_1_0__ref_view_fileset</spirit:name>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="amd.com" xilinx:library="finn" xilinx:name="memstream" xilinx:version="1.0">
             <xilinx:mode xilinx:name="create_mode"/>
           </xilinx:componentRef>
         </xilinx:subCoreRef>
@@ -709,10 +690,25 @@
         <spirit:userFileType>CELL_NAME_MVAU_hls_0/MVAU_hls_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_design_MVAU_hls_0_wstrm_0/finn_design_MVAU_hls_0_wstrm_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_3/axilite.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_3/memstream.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_3/memstream_axi.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_0/MVAU_hls_0_memstream_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sim/finn_design_MVAU_hls_0_wstrm_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_MVAU_hls_0/MVAU_hls_0_wstrm</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/StreamingFIFO_rtl_1.v</spirit:name>
@@ -761,10 +757,13 @@
         <spirit:userFileType>CELL_NAME_MVAU_hls_1/MVAU_hls_1</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_design_MVAU_hls_1_wstrm_0/finn_design_MVAU_hls_1_wstrm_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_1/MVAU_hls_1_memstream_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sim/finn_design_MVAU_hls_1_wstrm_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_MVAU_hls_1/MVAU_hls_1_wstrm</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/StreamingFIFO_rtl_3.v</spirit:name>
@@ -803,10 +802,13 @@
         <spirit:userFileType>CELL_NAME_MVAU_hls_2/MVAU_hls_2</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_design_MVAU_hls_2_wstrm_0/finn_design_MVAU_hls_2_wstrm_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_2/MVAU_hls_2_memstream_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sim/finn_design_MVAU_hls_2_wstrm_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_MVAU_hls_2/MVAU_hls_2_wstrm</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/StreamingFIFO_rtl_5.v</spirit:name>
@@ -825,10 +827,13 @@
         <spirit:userFileType>CELL_NAME_MVAU_hls_3/MVAU_hls_3</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_design_MVAU_hls_3_wstrm_0/finn_design_MVAU_hls_3_wstrm_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_3/MVAU_hls_3_memstream_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sim/finn_design_MVAU_hls_3_wstrm_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_MVAU_hls_3/MVAU_hls_3_wstrm</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/StreamingFIFO_rtl_6.v</spirit:name>
@@ -857,16 +862,6 @@
       </spirit:vendorExtensions>
     </spirit:fileSet>
     <spirit:fileSet>
-      <spirit:name>xilinx_anylanguagebehavioralsimulation_amd_com_finn_memstream_1_0__ref_view_fileset</spirit:name>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="amd.com" xilinx:library="finn" xilinx:name="memstream" xilinx:version="1.0">
-            <xilinx:mode xilinx:name="create_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
-    </spirit:fileSet>
-    <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_MVAU_hls_1_1_0__ref_view_fileset</spirit:name>
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
@@ -888,56 +883,6 @@
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_MVAU_hls_3_1_0__ref_view_fileset</spirit:name>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="MVAU_hls_3" xilinx:version="1.0">
-            <xilinx:mode xilinx:name="create_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_implementation_xilinx_com_hls_MVAU_hls_0_1_0__ref_view_fileset</spirit:name>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="MVAU_hls_0" xilinx:version="1.0">
-            <xilinx:mode xilinx:name="create_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_implementation_amd_com_finn_memstream_1_0__ref_view_fileset</spirit:name>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="amd.com" xilinx:library="finn" xilinx:name="memstream" xilinx:version="1.0">
-            <xilinx:mode xilinx:name="create_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_implementation_xilinx_com_hls_MVAU_hls_1_1_0__ref_view_fileset</spirit:name>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="MVAU_hls_1" xilinx:version="1.0">
-            <xilinx:mode xilinx:name="create_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_implementation_xilinx_com_hls_MVAU_hls_2_1_0__ref_view_fileset</spirit:name>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="MVAU_hls_2" xilinx:version="1.0">
-            <xilinx:mode xilinx:name="create_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_implementation_xilinx_com_hls_MVAU_hls_3_1_0__ref_view_fileset</spirit:name>
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
           <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="MVAU_hls_3" xilinx:version="1.0">
@@ -985,7 +930,7 @@
       <xilinx:displayName>finn_design_v1_0</xilinx:displayName>
       <xilinx:definitionSource>IPI</xilinx:definitionSource>
       <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-10-27T22:25:52Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2025-10-28T16:25:49Z</xilinx:coreCreationDateTime>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.AP_CLK.FREQ_HZ" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_0.FREQ_HZ" xilinx:valuePermission="bd"/>
@@ -1015,7 +960,7 @@
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="b87e7ddb"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="f1126300"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="713008fc"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="e01a236f"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="c89a5ebc"/>
       <xilinx:targetDRCs>

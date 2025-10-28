@@ -61,12 +61,12 @@ module finn_design_StreamingDataWidthConverter_rtl_0_0 (
   in0_V_TREADY,
   in0_V_TVALID,
   in0_V_TDATA,
-  out_V_TREADY,
-  out_V_TVALID,
-  out_V_TDATA
+  out0_V_TREADY,
+  out0_V_TVALID,
+  out0_V_TDATA
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_clk, ASSOCIATED_RESET ap_rst_n, ASSOCIATED_BUSIF in0_V:out_V, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN finn_design_ap_clk_0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_clk, ASSOCIATED_RESET ap_rst_n, ASSOCIATED_BUSIF in0_V:out0_V, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN finn_design_ap_clk_0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 ap_clk CLK" *)
 input wire ap_clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_rst_n, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
@@ -79,13 +79,13 @@ input wire in0_V_TVALID;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME in0_V, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN finn_design_ap_clk_0, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 in0_V TDATA" *)
 input wire [31 : 0] in0_V_TDATA;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 out_V TREADY" *)
-input wire out_V_TREADY;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 out_V TVALID" *)
-output wire out_V_TVALID;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME out_V, TDATA_NUM_BYTES 16, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN finn_design_ap_clk_0, LAYERED_METADATA undef, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 out_V TDATA" *)
-output wire [127 : 0] out_V_TDATA;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 out0_V TREADY" *)
+input wire out0_V_TREADY;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 out0_V TVALID" *)
+output wire out0_V_TVALID;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME out0_V, TDATA_NUM_BYTES 16, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN finn_design_ap_clk_0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 out0_V TDATA" *)
+output wire [127 : 0] out0_V_TDATA;
 
   StreamingDataWidthConverter_rtl_0 #(
     .IBITS(32),
@@ -98,8 +98,8 @@ output wire [127 : 0] out_V_TDATA;
     .in0_V_TREADY(in0_V_TREADY),
     .in0_V_TVALID(in0_V_TVALID),
     .in0_V_TDATA(in0_V_TDATA),
-    .out_V_TREADY(out_V_TREADY),
-    .out_V_TVALID(out_V_TVALID),
-    .out_V_TDATA(out_V_TDATA)
+    .out0_V_TREADY(out0_V_TREADY),
+    .out0_V_TVALID(out0_V_TVALID),
+    .out0_V_TDATA(out0_V_TDATA)
   );
 endmodule

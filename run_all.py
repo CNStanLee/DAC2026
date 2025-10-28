@@ -37,7 +37,7 @@ def unsw_nb15_padding_model():
     model = get_model("unsw_nb15", 2, 2)  # Example model instantiation
     model = model.to(device)
     # Load pretrained weights
-    trained_state_dict = torch.load("models/checkpoints/unsw_w2a2.pth")["models_state_dict"][0]
+    trained_state_dict = torch.load("models/checkpoints/unsw_w2a2.pth", weights_only=False)["models_state_dict"][0]
     model.load_state_dict(trained_state_dict, strict=False)
     # Test the model
     test_accuracy = test_unsw(model, test_quantized_loader, device)
@@ -57,7 +57,7 @@ def unsw_nb15_test_model():
     test_quantized_dataset = get_preqnt_dataset("data/unsw", False)
     test_quantized_loader = DataLoader(test_quantized_dataset, batch_size=batch_size, shuffle=False)  
     model = get_model("unsw_nb15_padded", 2, 2)
-    trained_state_dict = torch.load("models/checkpoints/unsw_w2a2_padded.pth")["models_state_dict"][0]
+    trained_state_dict = torch.load("models/checkpoints/unsw_w2a2_padded.pth", weights_only=False)["models_state_dict"][0]
     model.load_state_dict(trained_state_dict, strict=False)
     model = model.to(device)
     #
@@ -141,7 +141,8 @@ def unsw_nb15_experiment():
     model_for_export = unsw_nb15_test_model()
     unsw_nb15_export_onnx(model_for_export)
     unsw_nb15_estimate_ip()
-    #unsw_nb15_export_ip()
+    unsw_nb15_export_ip()
+    print("finished UNSW-NB15 experiment.")
 if __name__ == "__main__":
     # download the dataset
-   unsw_nb15_experiment()
+    unsw_nb15_experiment()

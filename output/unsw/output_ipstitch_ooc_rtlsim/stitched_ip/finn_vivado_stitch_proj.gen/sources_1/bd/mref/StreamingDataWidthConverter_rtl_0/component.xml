@@ -27,7 +27,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>ASSOCIATED_BUSIF</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.AP_CLK.ASSOCIATED_BUSIF">in0_V:out_V</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.AP_CLK.ASSOCIATED_BUSIF">in0_V:out0_V</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
@@ -64,7 +64,7 @@
       </spirit:portMaps>
     </spirit:busInterface>
     <spirit:busInterface>
-      <spirit:name>out_V</spirit:name>
+      <spirit:name>out0_V</spirit:name>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis_rtl" spirit:version="1.0"/>
       <spirit:master/>
@@ -74,7 +74,7 @@
             <spirit:name>TDATA</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
-            <spirit:name>out_V_TDATA</spirit:name>
+            <spirit:name>out0_V_TDATA</spirit:name>
           </spirit:physicalPort>
         </spirit:portMap>
         <spirit:portMap>
@@ -82,7 +82,7 @@
             <spirit:name>TVALID</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
-            <spirit:name>out_V_TVALID</spirit:name>
+            <spirit:name>out0_V_TVALID</spirit:name>
           </spirit:physicalPort>
         </spirit:portMap>
         <spirit:portMap>
@@ -90,7 +90,7 @@
             <spirit:name>TREADY</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
-            <spirit:name>out_V_TREADY</spirit:name>
+            <spirit:name>out0_V_TREADY</spirit:name>
           </spirit:physicalPort>
         </spirit:portMap>
       </spirit:portMaps>
@@ -129,7 +129,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>86c45c71</spirit:value>
+            <spirit:value>e43ac187</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -142,7 +142,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>86c45c71</spirit:value>
+            <spirit:value>e43ac187</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -229,7 +229,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>out_V_TREADY</spirit:name>
+        <spirit:name>out0_V_TREADY</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -245,7 +245,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>out_V_TVALID</spirit:name>
+        <spirit:name>out0_V_TVALID</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -258,7 +258,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>out_V_TDATA</spirit:name>
+        <spirit:name>out0_V_TDATA</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
@@ -358,7 +358,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-10-27T22:25:40Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2025-10-28T16:25:33Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.2</xilinx:xilinxVersion>
