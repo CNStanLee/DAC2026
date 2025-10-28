@@ -1,0 +1,50 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+  **** SW Build 3670227 on Oct 13 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source /tools/Xilinx/Vitis_HLS/2022.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'changhong' on host 'changhong-Alienware-m16-R2' (Linux_x86_64 version 6.8.0-85-generic) on Tue Oct 28 00:25:05 GMT 2025
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/changhong/prj/finn_dev/finn/script/DAC2026'
+Sourcing Tcl script 'spmm/finn-hlslib/tb/test_add.tcl'
+INFO: [HLS 200-1510] Running: source spmm/finn-hlslib/tb/test_add.tcl
+INFO: [HLS 200-1510] Running: open_project hls-syn-add 
+INFO: [HLS 200-10] Opening project '/home/changhong/prj/finn_dev/finn/script/DAC2026/hls-syn-add'.
+INFO: [HLS 200-1510] Running: add_files add_top.cpp -cflags -std=c++14 -I/home/changhong/prj/finn_dev/finn/script/DAC2026/spmm/finn-hlslib -I/home/changhong/prj/finn_dev/finn/script/DAC2026/spmm/finn-hlslib/tb 
+WARNING: [HLS 200-40] Cannot find design file 'add_top.cpp'
+INFO: [HLS 200-1510] Running: add_files -tb add_tb.cpp -cflags -std=c++14 -I/home/changhong/prj/finn_dev/finn/script/DAC2026/spmm/finn-hlslib -I/home/changhong/prj/finn_dev/finn/script/DAC2026/spmm/finn-hlslib/tb 
+WARNING: [HLS 200-40] Cannot find test bench file 'add_tb.cpp'
+INFO: [HLS 200-1510] Running: set_top Testbench_add 
+INFO: [HLS 200-1510] Running: open_solution sol1 
+INFO: [HLS 200-10] Opening solution '/home/changhong/prj/finn_dev/finn/script/DAC2026/hls-syn-add/sol1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sbva484-1-i'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xczu3eg-sbva484-1-i 
+INFO: [HLS 200-1510] Running: create_clock -period 5 -name default 
+INFO: [HLS 200-1510] Running: csim_design 
+Running Dispatch Server on port: 41831
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [HLS 200-627] Cannot find C test bench. Please specify test bench files using 'add_files -tb'.
+ERROR: [SIM 211-100] CSim failed with errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.03 seconds; current allocated memory: 0.000 MB.
+4
+    while executing
+"source spmm/finn-hlslib/tb/test_add.tcl"
+    invoked from within
+"hls::main spmm/finn-hlslib/tb/test_add.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$newargs"
+    (procedure "hls_proc" line 16)
+    invoked from within
+"hls_proc [info nameofexecutable] $argv"
+INFO: [HLS 200-112] Total CPU user time: 1.94 seconds. Total CPU system time: 0.47 seconds. Total elapsed time: 12.32 seconds; peak allocated memory: 1.071 GB.
+INFO: [Common 17-206] Exiting vitis_hls at Tue Oct 28 00:25:16 2025...
