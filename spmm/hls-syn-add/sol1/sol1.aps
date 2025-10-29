@@ -1,0 +1,22 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <config>
+        <config_interface m_axi_latency="0"/>
+    </config>
+    <name>
+        <value string="sol1"/>
+    </name>
+    <project>
+        <value string="hls-syn-add"/>
+    </project>
+    <flowTarget value="vivado"/>
+    <targetInfo>
+        <TargetInfo value="xczu3eg:-sbva484:-1-i"/>
+    </targetInfo>
+    <libraryList>
+        <library value="xilinx/zynquplus/zynquplus" name="DefaultPlatform"/>
+    </libraryList>
+    <clockList>
+        <clock name="default" default="false" period="5"/>
+    </clockList>
+</AutoPilot:solution>
+

@@ -14,3 +14,14 @@ vivado_hls spmm/finn-hlslib/tb/test_add.tcl
 ```
 source /tools/Xilinx/Vitis_HLS/2022.2/settings64.sh
 vitis_hls spmm/finn-hlslib/tb/test_add.tcl
+
+
+- note: when you run vitis_hls *.tcl, must in tb folder.
+``` bash
+cd spmm
+export FINN_HLS_ROOT=$(pwd)/finn_hlslib
+python finn_hlslib/tb/data/gen_weigths.py
+source /tools/Xilinx/Vitis_HLS/2022.2/settings64.sh
+cd /finn_hlslib/tb
+vitis_hls test_add.tcl
+```
