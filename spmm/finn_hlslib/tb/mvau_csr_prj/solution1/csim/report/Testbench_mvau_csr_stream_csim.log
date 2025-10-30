@@ -1,0 +1,16 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+INFO: [SIM 7] User does not set_part, FPO V7 c-model will be used by default.
+   Compiling ../../../../csr_mvau_stream_tb.cpp in release mode
+   Compiling ../../../../mvau_stream_top_masked.cpp in release mode
+   Compiling ../../../../mvau_stream_top.cpp in release mode
+   Compiling ../../../../csr_mvau_stream_top.cpp in release mode
+   Generating csim.exe
+Dense time: 553 us
+CSR   time: 657 us
+Effective speedup (dense/CSR): 0.841705x
+Dense check: PASS
+CSR   check: PASS
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 144
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

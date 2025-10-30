@@ -1,97 +1,130 @@
 #include <iostream>
+#include <cmath>
+#include <ctime>
+#include <cstring>
 #include <hls_stream.h>
-#include "ap_int.h"
 #include <cstdlib>
+#define AP_INT_MAX_W 8191
+#include "ap_int.h"
+#include "weights.hpp"
 #include "bnn-library.h"
-
-#include "mvau.hpp"
+#include "data/memdata.h"
+#include "data/config.h"
+#include "activations.hpp"
 #include "weights.hpp"
 #include "activations.hpp"
 #include "interpret.hpp"
-
-#include "data/mvau_config.h"
-#include "data/mvau_params.h"
-
-#ifndef NUM_REPEAT
-#define NUM_REPEAT 1
-#endif
-
-
-using namespace std;
+#include "mvau.hpp"
+#include "conv.hpp"
+#include <chrono>  
+using namespace std::chrono; 
 using namespace hls;
+using namespace std;
 
-typedef ap_uint<SIMD * TSrcI::width> TI_s;
-typedef ap_uint<PE   * TDstI::width> TO_s;
-typedef ap_uint<MMV * SIMD * TSrcI::width> TI;
-typedef ap_uint<MMV * PE   * TDstI::width> TO;
-typedef ap_uint<PE * SIMD * TWeightI::width> WP;
+#define MAX_IMAGES 1
+void Testbench_mvau_stream(stream<ap_uint<IFM_Channels1*INPUT_PRECISION> > & in, stream<ap_uint<OFM_Channels1*ACTIVATION_PRECISION> > & out, unsigned int numReps);
 
-void Testbench_mvau_stream_inst(stream<TI_s> &in,
-                                stream<TO_s> &out,
-                                stream< WP > &wstream,
-                                const unsigned int numReps);
-void Testbench_mvau_static_inst(stream<TI> &in, stream<TO> &out, const unsigned int numReps);
+int main()
+{
+	//create_memdata();
+	static	ap_uint<INPUT_PRECISION> IMAGE[MAX_IMAGES][IFMDim1*IFMDim1][IFM_Channels1];
+	static	ap_int<ACTIVATION_PRECISION> TEST[MAX_IMAGES][OFMDim1][OFMDim1][OFM_Channels1];
+	stream<ap_uint<IFM_Channels1*INPUT_PRECISION> > input_stream("input_stream");
+	stream<ap_uint<OFM_Channels1*ACTIVATION_PRECISION> > output_stream("output_stream");
+	unsigned int counter = 0;
+	for (unsigned int n_image = 0; n_image < MAX_IMAGES; n_image++) {
+		for (unsigned int oy = 0; oy < IFMDim1; oy++) {
+			for (unsigned int ox = 0; ox < IFMDim1; ox++) {
+				ap_uint<INPUT_PRECISION*IFM_Channels1> input_channel = 0;
+				for(unsigned int channel = 0; channel < IFM_Channels1; channel++)
+				{
+					ap_uint<INPUT_PRECISION> input = (ap_uint<INPUT_PRECISION>)(counter);
+					IMAGE[n_image][oy*IFMDim1+ox][channel]= input;
+					input_channel = input_channel >> INPUT_PRECISION;
+					input_channel(IFM_Channels1*INPUT_PRECISION-1,(IFM_Channels1-1)*INPUT_PRECISION)=input;
+					counter++;
+				}
+				input_stream.write(input_channel);
+			}
+		}
+	}
+	static	ap_uint<WIDTH> W1[OFM_Channels1][KERNEL_DIM][KERNEL_DIM][IFM_Channels1];
+	// initialize the weights
+	constexpr int TX = (IFM_Channels1*KERNEL_DIM*KERNEL_DIM) / SIMD1;
+	constexpr int TY = OFM_Channels1 / PE1;
+	unsigned int kx=0;
+	unsigned int ky=0;
+	unsigned int chan_count=0;
+	unsigned int out_chan_count=0;
 
-int main() {
-stream<TI_s> in_stream("in_stream");
-  stream<TO_s> out_stream("out_stream");
-  stream< WP > wstream("wstream");
+	for (unsigned int oy = 0; oy < TY; oy++) {
+		for(unsigned int pe=0;pe <PE1;pe++){
+			for (unsigned int ox = 0; ox <TX; ox++) {
+				for(unsigned int simd=0;simd<SIMD1;simd++){
+					W1[out_chan_count][kx][ky][chan_count] = PARAM::weights.weights(oy*TX + ox)[pe][simd];
+					//cout << "TILE " << oy*TX + ox << " PE " << pe << " SIMD " << simd << endl;
+					//cout << "IFM " << chan_count << " KX " << kx << " KY " << ky << " OFM " << out_chan_count << endl;
+					chan_count++;
+				    if (chan_count==IFM_Channels1){
+				    	chan_count=0;
+						kx++;
+						if (kx==KERNEL_DIM){
+							kx=0;
+							ky++;
+							if (ky==KERNEL_DIM){
+								ky=0;
+						    	out_chan_count++;
+							    if (out_chan_count==OFM_Channels1){
+							    	out_chan_count=0;
+							    }
+						    }
+					    }
+					}
+				}
+			}
+		}
+	}
+	conv<MAX_IMAGES,IFMDim1,OFMDim1,IFM_Channels1,OFM_Channels1, KERNEL_DIM, 1, ap_uint<INPUT_PRECISION> >(IMAGE, W1, TEST);
+	auto start = high_resolution_clock::now();
+  Testbench_mvau_stream(input_stream, output_stream, MAX_IMAGES);
+  auto end = high_resolution_clock::now();
+  auto duration = duration_cast<microseconds>(end - start);
+  std::cout << "MVAU computation time: " << duration.count() << " microseconds" << std::endl;
+	int err_counter = 0, err_perimage=0;
+	ap_int<ACTIVATION_PRECISION> out_chan;
+	for (unsigned int n_image = 0; n_image < MAX_IMAGES; n_image++) {
+		for (unsigned int oy = 0; oy < OFMDim1; oy++) {
+			for (unsigned int ox = 0; ox < OFMDim1; ox++) {
+				for(int e=0;e<1;e++){
+					ap_uint<OFM_Channels1*ACTIVATION_PRECISION> outElem = output_stream.read();
+					for(unsigned int channel = 0; channel < OFM_Channels1; channel++){
+						ap_int<ACTIVATION_PRECISION> EXP = TEST[n_image][ox][oy][channel + e * OFM_Channels1];
+						out_chan(ACTIVATION_PRECISION-1,0) = outElem((channel + 1)*ACTIVATION_PRECISION-1,channel*ACTIVATION_PRECISION);
 
-  // Also run the static variant for golden comparison
-  stream<TI> in_static("in_static");
-  stream<TO> out_static("out_static");
+						if (EXP != out_chan){
+							std::cout << "ERROR: Expected["<<oy <<"]["<<ox<<"]["<<channel<<"]=" << EXP << " actual " <<  out_chan << std::endl;
+							err_counter ++;
+							err_perimage++;
+						}else{
+							std::cout << "Expected["<<oy <<"]["<<ox<<"]["<<channel<<"]=" << EXP << " actual " <<  out_chan << std::endl;
+						}
+					}
+				}
+			}
+		}
+		if(err_perimage == 0){
+			std::cout << "Image # " << n_image << " passed the testing."<< std::endl;
+		}
+		else{
+			err_perimage=0;
+			std::cout << "Image # " << n_image << " failed the testing."<< std::endl;
+		}
+	}
+	if(err_counter == 0){
+		return 0;
+	}
+	else{
+		return 1;
+	}
 
-  // Prepare weights stream from the same weights object
-  for (unsigned rep = 0; rep < NUM_REPEAT; rep++) {
-    for (unsigned nf = 0; nf < NF; nf++) {
-      for (unsigned sf = 0; sf < SF; sf++) {
-        unsigned tile = nf * SF + sf;
-        auto const &wtile = weights.weights(tile);
-        WP packet = 0;
-        for (unsigned pe = 0; pe < PE; pe++) {
-#pragma HLS UNROLL
-          ap_uint<SIMD * TWeightI::width> slice = wtile[pe];
-          packet((pe+1)*SIMD*TWeightI::width-1, pe*SIMD*TWeightI::width) = slice;
-        }
-        wstream.write(packet);
-      }
-    }
-  }
-
-  // Inputs
-  for (unsigned rep = 0; rep < NUM_REPEAT; rep++) {
-    for (unsigned sf = 0; sf < SF; sf++) {
-      ap_uint<SIMD * TSrcI::width> inword_stream = (ap_uint<SIMD * TSrcI::width>)(rep*SF + sf);
-      in_stream.write(inword_stream);
-
-      TI inword_static = 0;
-      inword_static(SIMD*TSrcI::width-1, 0) = inword_stream;
-      in_static.write(inword_static);
-    }
-  }
-
-  // Run
-  Testbench_mvau_stream_inst(in_stream, out_stream, wstream, NUM_REPEAT);
-  Testbench_mvau_static_inst(in_static, out_static, NUM_REPEAT);
-
-  // Compare
-  for (unsigned rep = 0; rep < NUM_REPEAT; rep++) {
-    for (unsigned nf = 0; nf < NF; nf++) {
-      TO golden = out_static.read();
-      TO_s dut  = out_stream.read();
-      bool mismatch = false;
-      for (unsigned pe = 0; pe < PE; pe++) {
-        ap_uint<TDstI::width> g_lane = golden((pe+1)*TDstI::width-1, pe*TDstI::width);
-        ap_uint<TDstI::width> d_lane = dut((pe+1)*TDstI::width-1, pe*TDstI::width);
-        if (g_lane != d_lane) mismatch = true;
-      }
-      if (mismatch) {
-        std::cout << "Mismatch at rep=" << rep << " nf=" << nf << std::endl;
-        return 1;
-      }
-    }
-  }
-
-  std::cout << "MVAU stream TB PASS" << std::endl;
-  return 0;
 }

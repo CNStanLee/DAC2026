@@ -22,6 +22,7 @@ cd spmm
 export FINN_HLS_ROOT=$(pwd)/finn_hlslib
 python finn_hlslib/tb/data/gen_weigths.py
 source /tools/Xilinx/Vitis_HLS/2022.2/settings64.sh
-cd /finn_hlslib/tb
-vitis_hls test_add.tcl
+cd finn_hlslib/tb
+vitis_hls test_mvau_stream.tcl
+vitis_hls test_mvau_csr_stream.tcl
 ```

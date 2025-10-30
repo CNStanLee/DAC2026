@@ -1,0 +1,17 @@
+INFO-FLOW: Workspace /home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib/tb/mvau_csr_prj/solution1 opened at Thu Oct 30 02:43:29 GMT 2025
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-435@%s%s 'open_solution -flow_target vivado' config_interface -m_axi_latency=0 
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+Execute     config_interface -m_axi_latency=0 
+Execute   csim_design -O 
+INFO: [HLS 200-1510] Running: csim_design -O 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-7] User does not set_part, FPO V7 c-model will be used by default.
+Execute     source run_sim.tcl 
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 5.09 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 4.62 seconds. CPU system time: 0.45 seconds. Elapsed time: 5.09 seconds; current allocated memory: 0.496 MB.
+Execute   cleanup_all 
