@@ -72,3 +72,4 @@ def save_padded_unsw_model(old_ckpt_path, new_ckpt_path, w=2, a=2):
     # 6) 保存
     torch.save({"models_state_dict": [new_model.state_dict()]}, new_ckpt_path)
     print(f"new padded model saved to: {new_ckpt_path}")
+

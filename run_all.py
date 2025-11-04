@@ -19,7 +19,8 @@ import shutil
 import finn.builder.build_dataflow as build
 import finn.builder.build_dataflow_config as build_cfg
 from models.model_utils import save_padded_unsw_model
-
+#
+from utils.pruning import analyze_model_sparsity, global_magnitude_prune_with_min
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print("Target device: " + str(device))
 
@@ -114,6 +115,35 @@ def unsw_nb15_estimate_ip():
         ]
     )
     build.build_dataflow_cfg(model_file, cfg_estimates)
+
+def unsw_nb15_custom_flow():
+    model_file = "models/unsw/cybsec-mlp-ready.onnx"
+    custom_output_dir = "output/unsw/output_custom_flow"
+
+    #Delete previous run results if exist
+    if os.path.exists(custom_output_dir):
+        shutil.rmtree(custom_output_dir)
+        print("Previous run results deleted!")
+    # 10000000 MID
+    # 1000000 MINI
+    cfg_custom = build.DataflowBuildConfig(
+        output_dir          = custom_output_dir,
+        mvau_wwidth_max     = 10000,
+        target_fps          = 1000000,
+        synth_clk_period_ns = 10.0,
+        fpga_part           = "xc7z020clg400-1",
+        steps               = build_cfg.custom_dataflow_steps,
+        # folding_config_file = "models/config1.json",
+        split_large_fifos  = True,
+        generate_outputs=[
+            build_cfg.DataflowOutputType.ESTIMATE_REPORTS,
+            build_cfg.DataflowOutputType.STITCHED_IP,
+            build_cfg.DataflowOutputType.RTLSIM_PERFORMANCE,
+            build_cfg.DataflowOutputType.OOC_SYNTH,
+        ]
+    )
+    build.build_dataflow_cfg(model_file, cfg_custom)
+
 def unsw_nb15_export_ip():
     model_file = "models/unsw/cybsec-mlp-ready.onnx"
     rtlsim_output_dir = "output/unsw/output_ipstitch_ooc_rtlsim"
@@ -137,11 +167,15 @@ def unsw_nb15_export_ip():
     build.build_dataflow_cfg(model_file, cfg_stitched_ip)
 
 def unsw_nb15_experiment():
-    unsw_nb15_padding_model()
-    model_for_export = unsw_nb15_test_model()
-    unsw_nb15_export_onnx(model_for_export)
-    unsw_nb15_estimate_ip()
-    unsw_nb15_export_ip()
+    # unsw_nb15_padding_model() # Run this only once to create the padded model
+    unsw_nb15_dense_model = unsw_nb15_test_model()
+    analyze_model_sparsity(unsw_nb15_dense_model)
+    unsw_nb15_sparse_model = global_magnitude_prune_with_min(unsw_nb15_dense_model, target_sparsity=0.92)
+    analyze_model_sparsity(unsw_nb15_sparse_model)
+    unsw_nb15_export_onnx(unsw_nb15_sparse_model)
+    unsw_nb15_custom_flow()
+    # unsw_nb15_estimate_ip()
+    # unsw_nb15_export_ip()
     print("finished UNSW-NB15 experiment.")
 if __name__ == "__main__":
     # download the dataset
