@@ -27,3 +27,5 @@ vitis_hls test_mvau_stream.tcl
 vitis_hls test_mvau_csr_stream.tcl
 vitis_hls test_mvau_tcsr_stream.tcl
 ```
+
+export FINN_ROOT=/home/changhong/prj/finn_cli_fork

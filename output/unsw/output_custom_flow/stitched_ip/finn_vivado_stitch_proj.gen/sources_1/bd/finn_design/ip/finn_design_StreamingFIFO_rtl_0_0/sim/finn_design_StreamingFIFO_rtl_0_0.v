@@ -73,22 +73,22 @@ input wire ap_clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_rst_n, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 ap_rst_n RST" *)
 input wire ap_rst_n;
-output wire [1 : 0] count;
-output wire [1 : 0] maxcount;
+output wire [5 : 0] count;
+output wire [5 : 0] maxcount;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 in0_V TREADY" *)
 output wire in0_V_TREADY;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 in0_V TVALID" *)
 input wire in0_V_TVALID;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME in0_V, TDATA_NUM_BYTES 75, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN finn_design_ap_clk_0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME in0_V, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN finn_design_ap_clk_0, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 in0_V TDATA" *)
-input wire [599 : 0] in0_V_TDATA;
+input wire [7 : 0] in0_V_TDATA;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 out0_V TREADY" *)
 input wire out0_V_TREADY;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 out0_V TVALID" *)
 output wire out0_V_TVALID;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME out0_V, TDATA_NUM_BYTES 75, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN finn_design_ap_clk_0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME out0_V, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN finn_design_ap_clk_0, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 out0_V TDATA" *)
-output wire [599 : 0] out0_V_TDATA;
+output wire [7 : 0] out0_V_TDATA;
 
   StreamingFIFO_rtl_0 inst (
     .ap_clk(ap_clk),

@@ -1,6 +1,6 @@
 {
-  "MVAU_hls_0": 64,
-  "MVAU_hls_1": 64,
-  "MVAU_hls_2": 64,
+  "MVAU_hls_0": 9600,
+  "MVAU_hls_1": 4096,
+  "MVAU_hls_2": 4096,
   "MVAU_hls_3": 64
 }

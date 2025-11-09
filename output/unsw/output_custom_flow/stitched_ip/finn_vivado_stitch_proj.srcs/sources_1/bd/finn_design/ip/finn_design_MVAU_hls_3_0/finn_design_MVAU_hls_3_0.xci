@@ -4,7 +4,7 @@
     "xci_name": "finn_design_MVAU_hls_3_0",
     "cell_name": "MVAU_hls_3/MVAU_hls_3",
     "component_reference": "xilinx.com:hls:MVAU_hls_3:1.0",
-    "ip_revision": "2114331147",
+    "ip_revision": "2114341128",
     "gen_directory": "../../../../../../finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/ip/finn_design_MVAU_hls_3_0",
     "parameters": {
       "component_parameters": {
@@ -32,7 +32,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "2114331147" } ],
+        "IPREVISION": [ { "value": "2114341128" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/ip/finn_design_MVAU_hls_3_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],

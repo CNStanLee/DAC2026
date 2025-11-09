@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:hls:MVAU_hls_3:1.0
-// IP Revision: 2114331147
+// IP Revision: 2114341128
 
 (* X_CORE_INFO = "MVAU_hls_3,Vivado 2022.2" *)
 (* CHECK_LICENSE_TYPE = "finn_design_MVAU_hls_3_0,MVAU_hls_3,{}" *)
-(* CORE_GENERATION_INFO = "finn_design_MVAU_hls_3_0,MVAU_hls_3,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=MVAU_hls_3,x_ipVersion=1.0,x_ipCoreRevision=2114331147,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* CORE_GENERATION_INFO = "finn_design_MVAU_hls_3_0,MVAU_hls_3,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=MVAU_hls_3,x_ipVersion=1.0,x_ipCoreRevision=2114341128,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
 (* IP_DEFINITION_SOURCE = "HLS" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module finn_design_MVAU_hls_3_0 (

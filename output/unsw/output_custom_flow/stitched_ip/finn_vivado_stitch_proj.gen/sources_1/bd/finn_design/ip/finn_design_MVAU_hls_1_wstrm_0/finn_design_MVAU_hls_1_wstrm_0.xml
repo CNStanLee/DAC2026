@@ -209,7 +209,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_0.TDATA_NUM_BYTES">16</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_0.TDATA_NUM_BYTES">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -677,7 +677,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>ADDR_WIDTH</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXILITE.ADDR_WIDTH">10</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXILITE.ADDR_WIDTH">14</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -976,7 +976,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6f32c56f</spirit:value>
+            <spirit:value>9:bf390b1c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -987,7 +987,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6f32c56f</spirit:value>
+            <spirit:value>9:bf390b1c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1003,11 +1003,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Nov 02 22:29:10 UTC 2025</spirit:value>
+            <spirit:value>Sun Nov 09 20:50:11 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6f32c56f</spirit:value>
+            <spirit:value>9:bf390b1c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1019,7 +1019,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:05e10112</spirit:value>
+            <spirit:value>9:45fc9b5f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1035,11 +1035,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Nov 02 22:29:10 UTC 2025</spirit:value>
+            <spirit:value>Sun Nov 09 20:50:11 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:05e10112</spirit:value>
+            <spirit:value>9:45fc9b5f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1138,7 +1138,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.AXILITE_ADDR_WIDTH&apos;)) - 1)">9</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.AXILITE_ADDR_WIDTH&apos;)) - 1)">13</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1322,7 +1322,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.AXILITE_ADDR_WIDTH&apos;)) - 1)">9</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.AXILITE_ADDR_WIDTH&apos;)) - 1)">13</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1480,7 +1480,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((spirit:decode(id(&apos;MODELPARAM_VALUE.WIDTH&apos;)) + 7) / 8) * 8) - 1)">127</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((spirit:decode(id(&apos;MODELPARAM_VALUE.WIDTH&apos;)) + 7) / 8) * 8) - 1)">7</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1502,17 +1502,17 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>DEPTH</spirit:name>
         <spirit:displayName>Depth</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.DEPTH">64</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.DEPTH">4096</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>WIDTH</spirit:name>
         <spirit:displayName>Width</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.WIDTH">128</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.WIDTH">8</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>INIT_FILE</spirit:name>
         <spirit:displayName>Init File</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.INIT_FILE">/tmp/finn_dev_changhong/code_gen_ipgen_MVAU_hls_1_kd8vljfx/memblock.dat</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.INIT_FILE">/tmp/finn_dev_changhong/code_gen_ipgen_MVAU_hls_1_x4c5fvwg/memblock.dat</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>RAM_STYLE</spirit:name>
@@ -1527,7 +1527,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>AXILITE_ADDR_WIDTH</spirit:name>
         <spirit:displayName>Axilite Addr Width</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.AXILITE_ADDR_WIDTH" spirit:dependency="(spirit:ceil(spirit:log(2,(spirit:decode(id(&apos;MODELPARAM_VALUE.DEPTH&apos;)) * (2 ** spirit:ceil(spirit:log(2,((spirit:decode(id(&apos;MODELPARAM_VALUE.WIDTH&apos;)) + 31) / 32))))))) + 2)">10</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.AXILITE_ADDR_WIDTH" spirit:dependency="(spirit:ceil(spirit:log(2,(spirit:decode(id(&apos;MODELPARAM_VALUE.DEPTH&apos;)) * (2 ** spirit:ceil(spirit:log(2,((spirit:decode(id(&apos;MODELPARAM_VALUE.WIDTH&apos;)) + 31) / 32))))))) + 2)">14</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>SET_BITS</spirit:name>
@@ -1571,17 +1571,17 @@
     <spirit:parameter>
       <spirit:name>DEPTH</spirit:name>
       <spirit:displayName>Depth</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.DEPTH">64</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.DEPTH">4096</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>WIDTH</spirit:name>
       <spirit:displayName>Width</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.WIDTH">128</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.WIDTH">8</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>INIT_FILE</spirit:name>
       <spirit:displayName>Init File</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.INIT_FILE">/tmp/finn_dev_changhong/code_gen_ipgen_MVAU_hls_1_kd8vljfx/memblock.dat</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.INIT_FILE">/tmp/finn_dev_changhong/code_gen_ipgen_MVAU_hls_1_x4c5fvwg/memblock.dat</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RAM_STYLE</spirit:name>
@@ -1596,7 +1596,7 @@
     <spirit:parameter>
       <spirit:name>AXILITE_ADDR_WIDTH</spirit:name>
       <spirit:displayName>Axilite Addr Width</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.AXILITE_ADDR_WIDTH">10</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.AXILITE_ADDR_WIDTH">14</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>SET_BITS</spirit:name>

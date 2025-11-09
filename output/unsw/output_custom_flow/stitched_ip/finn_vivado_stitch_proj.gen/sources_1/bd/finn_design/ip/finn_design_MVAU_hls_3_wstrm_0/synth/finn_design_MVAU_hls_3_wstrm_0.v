@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "MVAU_hls_3_memstream_wrapper,Vivado 2022.2" *)
 (* CHECK_LICENSE_TYPE = "finn_design_MVAU_hls_3_wstrm_0,MVAU_hls_3_memstream_wrapper,{}" *)
-(* CORE_GENERATION_INFO = "finn_design_MVAU_hls_3_wstrm_0,MVAU_hls_3_memstream_wrapper,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=MVAU_hls_3_memstream_wrapper,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,SETS=1,DEPTH=64,WIDTH=8,INIT_FILE=/tmp/finn_dev_changhong/code_gen_ipgen_MVAU_hls_3_q2bv6_fb/memblock.dat,RAM_STYLE=auto,PUMPED_MEMORY=0,AXILITE_ADDR_WIDTH=8,SET_BITS=1}" *)
+(* CORE_GENERATION_INFO = "finn_design_MVAU_hls_3_wstrm_0,MVAU_hls_3_memstream_wrapper,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=MVAU_hls_3_memstream_wrapper,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,SETS=1,DEPTH=64,WIDTH=8,INIT_FILE=/tmp/finn_dev_changhong/code_gen_ipgen_MVAU_hls_3_itmk9bio/memblock.dat,RAM_STYLE=auto,PUMPED_MEMORY=0,AXILITE_ADDR_WIDTH=8,SET_BITS=1}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module finn_design_MVAU_hls_3_wstrm_0 (
@@ -154,7 +154,7 @@ output wire [7 : 0] m_axis_0_tdata;
     .SETS(1),
     .DEPTH(64),
     .WIDTH(8),
-    .INIT_FILE("/tmp/finn_dev_changhong/code_gen_ipgen_MVAU_hls_3_q2bv6_fb/memblock.dat"),
+    .INIT_FILE("/tmp/finn_dev_changhong/code_gen_ipgen_MVAU_hls_3_itmk9bio/memblock.dat"),
     .RAM_STYLE("auto"),
     .PUMPED_MEMORY(0),
     .AXILITE_ADDR_WIDTH(8),

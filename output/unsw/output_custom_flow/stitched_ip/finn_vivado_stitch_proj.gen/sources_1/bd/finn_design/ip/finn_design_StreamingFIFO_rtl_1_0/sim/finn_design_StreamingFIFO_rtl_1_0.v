@@ -73,8 +73,8 @@ input wire ap_clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_rst_n, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 ap_rst_n RST" *)
 input wire ap_rst_n;
-output wire [1 : 0] count;
-output wire [1 : 0] maxcount;
+output wire [5 : 0] count;
+output wire [5 : 0] maxcount;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 in0_V TREADY" *)
 output wire in0_V_TREADY;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 in0_V TVALID" *)

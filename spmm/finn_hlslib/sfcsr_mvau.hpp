@@ -5,6 +5,9 @@
 #include <hls_stream.h>
 #include "ap_int.h"
 
+
+
+
 // SF-CSR MVAU：只传 sf = col/SIMD + mask；隐含 lan = s（方案A，分桶发送）
 template<
   unsigned MatrixW,

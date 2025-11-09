@@ -321,7 +321,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f5e41e88</spirit:value>
+            <spirit:value>a119ace6</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -334,7 +334,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f5e41e88</spirit:value>
+            <spirit:value>a119ace6</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -441,7 +441,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.AXILITE_ADDR_WIDTH&apos;)) - 1)">13</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.AXILITE_ADDR_WIDTH&apos;)) - 1)">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -625,7 +625,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.AXILITE_ADDR_WIDTH&apos;)) - 1)">13</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.AXILITE_ADDR_WIDTH&apos;)) - 1)">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -783,7 +783,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((spirit:decode(id(&apos;MODELPARAM_VALUE.WIDTH&apos;)) + 7) / 8) * 8) - 1)">1199</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((spirit:decode(id(&apos;MODELPARAM_VALUE.WIDTH&apos;)) + 7) / 8) * 8) - 1)">7</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -805,17 +805,17 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>DEPTH</spirit:name>
         <spirit:displayName>Depth</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.DEPTH">64</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.DEPTH">9600</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>WIDTH</spirit:name>
         <spirit:displayName>Width</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.WIDTH">1200</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.WIDTH">8</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>INIT_FILE</spirit:name>
         <spirit:displayName>Init File</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.INIT_FILE">/tmp/finn_dev_changhong/code_gen_ipgen_MVAU_hls_0_9ctvigng/memblock.dat</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.INIT_FILE">/tmp/finn_dev_changhong/code_gen_ipgen_MVAU_hls_0_4gp_j9au/memblock.dat</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>RAM_STYLE</spirit:name>
@@ -830,7 +830,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>AXILITE_ADDR_WIDTH</spirit:name>
         <spirit:displayName>Axilite Addr Width</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.AXILITE_ADDR_WIDTH" spirit:dependency="(spirit:ceil(spirit:log(2,(spirit:decode(id(&apos;MODELPARAM_VALUE.DEPTH&apos;)) * (2 ** spirit:ceil(spirit:log(2,((spirit:decode(id(&apos;MODELPARAM_VALUE.WIDTH&apos;)) + 31) / 32))))))) + 2)">14</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.AXILITE_ADDR_WIDTH" spirit:dependency="(spirit:ceil(spirit:log(2,(spirit:decode(id(&apos;MODELPARAM_VALUE.DEPTH&apos;)) * (2 ** spirit:ceil(spirit:log(2,((spirit:decode(id(&apos;MODELPARAM_VALUE.WIDTH&apos;)) + 31) / 32))))))) + 2)">16</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>SET_BITS</spirit:name>
@@ -867,17 +867,17 @@
     <spirit:parameter>
       <spirit:name>DEPTH</spirit:name>
       <spirit:displayName>Depth</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.DEPTH">64</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.DEPTH">9600</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>WIDTH</spirit:name>
       <spirit:displayName>Width</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.WIDTH">1200</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.WIDTH">8</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>INIT_FILE</spirit:name>
       <spirit:displayName>Init File</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.INIT_FILE">/tmp/finn_dev_changhong/code_gen_ipgen_MVAU_hls_0_9ctvigng/memblock.dat</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.INIT_FILE">/tmp/finn_dev_changhong/code_gen_ipgen_MVAU_hls_0_4gp_j9au/memblock.dat</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RAM_STYLE</spirit:name>
@@ -892,7 +892,7 @@
     <spirit:parameter>
       <spirit:name>AXILITE_ADDR_WIDTH</spirit:name>
       <spirit:displayName>Axilite Addr Width</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.AXILITE_ADDR_WIDTH">14</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.AXILITE_ADDR_WIDTH">16</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>SET_BITS</spirit:name>
@@ -919,7 +919,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-11-02T22:28:46Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2025-11-09T20:49:57Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.2</xilinx:xilinxVersion>

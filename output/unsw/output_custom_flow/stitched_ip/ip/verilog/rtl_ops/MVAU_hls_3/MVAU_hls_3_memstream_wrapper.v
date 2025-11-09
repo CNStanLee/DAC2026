@@ -34,7 +34,7 @@ module MVAU_hls_3_memstream_wrapper #(
 	parameter  DEPTH = 64,
 	parameter  WIDTH = 8,
 
-	parameter  INIT_FILE = "/tmp/finn_dev_changhong/code_gen_ipgen_MVAU_hls_3_q2bv6_fb/memblock.dat",
+	parameter  INIT_FILE = "/tmp/finn_dev_changhong/code_gen_ipgen_MVAU_hls_3_itmk9bio/memblock.dat",
 	parameter  RAM_STYLE = "auto",
 	parameter  PUMPED_MEMORY = 0,
 

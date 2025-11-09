@@ -129,12 +129,15 @@ def unsw_nb15_custom_flow():
     cfg_custom = build.DataflowBuildConfig(
         output_dir          = custom_output_dir,
         mvau_wwidth_max     = 10000,
-        target_fps          = 1000000,
+        target_fps          = 10000,
         synth_clk_period_ns = 10.0,
         fpga_part           = "xc7z020clg400-1",
-        steps               = build_cfg.custom_dataflow_steps,
+        # steps               = build_cfg.custom_dataflow_steps,
+        steps               = build_cfg.dense_dataflow_steps,
         # folding_config_file = "models/config1.json",
         split_large_fifos  = True,
+        fifosim_save_waveform = True,
+        verbose            = True,
         generate_outputs=[
             build_cfg.DataflowOutputType.ESTIMATE_REPORTS,
             build_cfg.DataflowOutputType.STITCHED_IP,

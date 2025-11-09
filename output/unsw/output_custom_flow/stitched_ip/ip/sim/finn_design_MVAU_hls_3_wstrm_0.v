@@ -153,7 +153,7 @@ output wire [7 : 0] m_axis_0_tdata;
     .SETS(1),
     .DEPTH(64),
     .WIDTH(8),
-    .INIT_FILE("/tmp/finn_dev_changhong/code_gen_ipgen_MVAU_hls_3_q2bv6_fb/memblock.dat"),
+    .INIT_FILE("/tmp/finn_dev_changhong/code_gen_ipgen_MVAU_hls_3_itmk9bio/memblock.dat"),
     .RAM_STYLE("auto"),
     .PUMPED_MEMORY(0),
     .AXILITE_ADDR_WIDTH(8),

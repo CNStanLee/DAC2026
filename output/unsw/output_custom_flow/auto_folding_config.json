@@ -2,7 +2,7 @@
   "Defaults": {},
   "MVAU_hls_0": {
     "PE": 1,
-    "SIMD": 600,
+    "SIMD": 4,
     "ram_style": "auto",
     "resType": "lut",
     "mem_mode": "internal_decoupled",
@@ -10,7 +10,7 @@
   },
   "MVAU_hls_1": {
     "PE": 1,
-    "SIMD": 64,
+    "SIMD": 1,
     "ram_style": "auto",
     "resType": "lut",
     "mem_mode": "internal_decoupled",
@@ -18,7 +18,7 @@
   },
   "MVAU_hls_2": {
     "PE": 1,
-    "SIMD": 64,
+    "SIMD": 1,
     "ram_style": "auto",
     "resType": "lut",
     "mem_mode": "internal_decoupled",

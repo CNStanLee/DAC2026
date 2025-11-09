@@ -51,22 +51,38 @@ output   out0_V_TVALID,
 output  [7:0] out0_V_TDATA
 );
 
-Q_srl #(
-.depth(2),
-.width(8)
-)
-impl
-(
- .clock(ap_clk),
- .reset(!ap_rst_n),
- .count(count),
- .maxcount(maxcount),
- .i_d(in0_V_TDATA),
- .i_v(in0_V_TVALID),
- .i_r(in0_V_TREADY),
- .o_d(out0_V_TDATA),
- .o_v(out0_V_TVALID),
- .o_r(out0_V_TREADY)
-);
+	localparam fifo_core = "q_srl";
+
+	case(fifo_core)
+	"sim_fifo_gauge":
+		fifo_gauge #(.WIDTH(8), .COUNT_WIDTH(2)) fifo (
+			.clk(ap_clk), .rst(!ap_rst_n),
+			.idat(in0_V_TDATA), .ivld(in0_V_TVALID), .irdy(in0_V_TREADY),
+			.odat(out0_V_TDATA), .ovld(out0_V_TVALID), .ordy(out0_V_TREADY),
+			.count(count), .maxcount(maxcount)
+		);
+	"q_srl":
+		Q_srl #(
+		.depth(2),
+		.width(8)
+		)
+		impl
+		(
+		.clock(ap_clk),
+		.reset(!ap_rst_n),
+		.count(count),
+		.maxcount(maxcount),
+		.i_d(in0_V_TDATA),
+		.i_v(in0_V_TVALID),
+		.i_r(in0_V_TREADY),
+		.o_d(out0_V_TDATA),
+		.o_v(out0_V_TVALID),
+		.o_r(out0_V_TREADY)
+		);
+	default: initial begin
+			$error("Unrecognized FIFO_CORE '%s'", FIFO_CORE);
+			$finish;
+		end
+		endcase
 
 endmodule
