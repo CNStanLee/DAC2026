@@ -25,4 +25,5 @@ source /tools/Xilinx/Vitis_HLS/2022.2/settings64.sh
 cd finn_hlslib/tb
 vitis_hls test_mvau_stream.tcl
 vitis_hls test_mvau_csr_stream.tcl
+vitis_hls test_mvau_tcsr_stream.tcl
 ```

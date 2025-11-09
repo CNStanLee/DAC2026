@@ -12,7 +12,7 @@ inline bool csr_keep_rule(
     ap_uint<WIDTH> wbits
 ) {
     //return (wbits != 0);      // 原版：和dense一样
-    return (col % 2) == 0;    // 示例：剪一半
+    return (col % 20) == 0;    // 示例：剪一半
     //return (col % 10) == 0;    // 示例：剪90%
     //return false;                // 你现在的实验：全剪
 }

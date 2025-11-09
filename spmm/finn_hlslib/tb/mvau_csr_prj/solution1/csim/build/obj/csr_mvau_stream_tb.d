@@ -21,27 +21,27 @@ obj/csr_mvau_stream_tb.o: ../../../../csr_mvau_stream_tb.cpp \
  /tools/Xilinx/Vitis_HLS/2022.2/include/ap_fixed_base.h \
  /tools/Xilinx/Vitis_HLS/2022.2/include/ap_fixed_ref.h \
  /tools/Xilinx/Vitis_HLS/2022.2/include/ap_fixed_special.h \
- /home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib/weights.hpp \
- /home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib/bnn-library.h \
- /home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib/weights.hpp \
- /home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib/mmv.hpp \
- /home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib/streamtools.h \
+ /home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm/finn_hlslib/weights.hpp \
+ /home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm/finn_hlslib/bnn-library.h \
+ /home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm/finn_hlslib/weights.hpp \
+ /home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm/finn_hlslib/mmv.hpp \
+ /home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm/finn_hlslib/streamtools.h \
  /tools/Xilinx/Vitis_HLS/2022.2/include/ap_axi_sdata.h \
  /tools/Xilinx/Vitis_HLS/2022.2/include/ap_int.h \
- /home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib/dma.h \
- /home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib/slidingwindow.h \
- /home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib/utils.hpp \
- /home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib/maxpool.h \
- /home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib/interpret.hpp \
- /home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib/convlayer.h \
- /home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib/mvau.hpp \
- /home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib/mac.hpp \
- /home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib/tmrcheck.hpp \
- /home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib/vvau.hpp \
- /home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib/upsample.hpp \
+ /home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm/finn_hlslib/dma.h \
+ /home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm/finn_hlslib/slidingwindow.h \
+ /home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm/finn_hlslib/utils.hpp \
+ /home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm/finn_hlslib/maxpool.h \
+ /home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm/finn_hlslib/interpret.hpp \
+ /home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm/finn_hlslib/convlayer.h \
+ /home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm/finn_hlslib/mvau.hpp \
+ /home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm/finn_hlslib/mac.hpp \
+ /home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm/finn_hlslib/tmrcheck.hpp \
+ /home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm/finn_hlslib/vvau.hpp \
+ /home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm/finn_hlslib/upsample.hpp \
  ../../../../data/memdata_csr.h ../../../../data/config_csr.h \
- /home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib/activations.hpp \
- /home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib/interpret.hpp \
- /home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib/mvau.hpp \
+ /home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm/finn_hlslib/activations.hpp \
+ /home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm/finn_hlslib/interpret.hpp \
+ /home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm/finn_hlslib/mvau.hpp \
  ../../../../conv.hpp \
- /home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib/csr_mask.hpp
+ /home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm/finn_hlslib/csr_mask.hpp

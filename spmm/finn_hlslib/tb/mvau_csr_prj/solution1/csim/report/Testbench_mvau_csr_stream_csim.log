@@ -6,9 +6,9 @@ INFO: [SIM 7] User does not set_part, FPO V7 c-model will be used by default.
    Compiling ../../../../mvau_stream_top.cpp in release mode
    Compiling ../../../../csr_mvau_stream_top.cpp in release mode
    Generating csim.exe
-Dense time: 553 us
-CSR   time: 657 us
-Effective speedup (dense/CSR): 0.841705x
+Dense time: 276 us
+CSR   time: 118 us
+Effective speedup (dense/CSR): 2.33898x
 Dense check: PASS
 CSR   check: PASS
 INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 144

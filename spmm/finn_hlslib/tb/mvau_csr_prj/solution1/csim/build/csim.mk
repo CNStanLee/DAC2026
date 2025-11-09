@@ -57,7 +57,7 @@ IFLAG += -D__SIM_FIR__
 
 IFLAG += -D__SIM_DDS__
 
-IFLAG += -I/home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib -I/home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib/tb -std=c++14 -Wno-unknown-pragmas 
+IFLAG += -I/home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm/finn_hlslib -I/home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm/finn_hlslib/tb -std=c++14 -Wno-unknown-pragmas 
 AP_ENABLE_OPTIMIZED := 1
 DFLAG += -D__xilinx_ip_top= -DAESL_TB
 CCFLAG += -Werror=return-type
@@ -74,24 +74,24 @@ all: $(TARGET)
 
 $(ObjDir)/csr_mvau_stream_tb.o: ../../../../csr_mvau_stream_tb.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../csr_mvau_stream_tb.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib -I/home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib/tb -std=c++14 -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) -DNDEBUG $< -o $@ ; \
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm/finn_hlslib -I/home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm/finn_hlslib/tb -std=c++14 -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) -DNDEBUG $< -o $@ ; \
 
 -include $(ObjDir)/csr_mvau_stream_tb.d
 
 $(ObjDir)/mvau_stream_top_masked.o: ../../../../mvau_stream_top_masked.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../mvau_stream_top_masked.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib -I/home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib/tb -std=c++14  $(IFLAG) $(DFLAG) -DNDEBUG $< -o $@ ; \
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm/finn_hlslib -I/home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm/finn_hlslib/tb -std=c++14  $(IFLAG) $(DFLAG) -DNDEBUG $< -o $@ ; \
 
 -include $(ObjDir)/mvau_stream_top_masked.d
 
 $(ObjDir)/mvau_stream_top.o: ../../../../mvau_stream_top.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../mvau_stream_top.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib -I/home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib/tb -std=c++14  $(IFLAG) $(DFLAG) -DNDEBUG $< -o $@ ; \
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm/finn_hlslib -I/home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm/finn_hlslib/tb -std=c++14  $(IFLAG) $(DFLAG) -DNDEBUG $< -o $@ ; \
 
 -include $(ObjDir)/mvau_stream_top.d
 
 $(ObjDir)/csr_mvau_stream_top.o: ../../../../csr_mvau_stream_top.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../csr_mvau_stream_top.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib -I/home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm/finn_hlslib/tb -std=c++14  $(IFLAG) $(DFLAG) -DNDEBUG $< -o $@ ; \
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm/finn_hlslib -I/home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm/finn_hlslib/tb -std=c++14  $(IFLAG) $(DFLAG) -DNDEBUG $< -o $@ ; \
 
 -include $(ObjDir)/csr_mvau_stream_top.d
