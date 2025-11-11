@@ -23,9 +23,10 @@ export FINN_HLS_ROOT=$(pwd)/finn_hlslib
 python finn_hlslib/tb/data/gen_weigths.py
 source /tools/Xilinx/Vitis_HLS/2022.2/settings64.sh
 cd finn_hlslib/tb
+vitis_hls test_mvau_static.tcl
 vitis_hls test_mvau_stream.tcl
 vitis_hls test_mvau_csr_stream.tcl
-vitis_hls test_mvau_tcsr_stream.tcl
+vitis_hls test_mvau_sfcsr_stream.tcl
 ```
 
 export FINN_ROOT=/home/changhong/prj/finn_cli_fork

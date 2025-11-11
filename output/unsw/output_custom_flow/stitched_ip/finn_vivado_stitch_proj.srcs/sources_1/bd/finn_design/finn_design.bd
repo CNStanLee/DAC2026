@@ -14,17 +14,26 @@
       "StreamingFIFO_rtl_0": "",
       "MVAU_hls_0": {
         "MVAU_hls_0": "",
-        "MVAU_hls_0_wstrm": ""
+        "MVAU_hls_0_wstrm_sfidx": "",
+        "MVAU_hls_0_wstrm_val": "",
+        "MVAU_hls_0_wstrm_mask": "",
+        "MVAU_hls_0_wstrm_rowlen": ""
       },
       "StreamingFIFO_rtl_1": "",
       "MVAU_hls_1": {
         "MVAU_hls_1": "",
-        "MVAU_hls_1_wstrm": ""
+        "MVAU_hls_1_wstrm_sfidx": "",
+        "MVAU_hls_1_wstrm_val": "",
+        "MVAU_hls_1_wstrm_mask": "",
+        "MVAU_hls_1_wstrm_rowlen": ""
       },
       "StreamingFIFO_rtl_2": "",
       "MVAU_hls_2": {
         "MVAU_hls_2": "",
-        "MVAU_hls_2_wstrm": ""
+        "MVAU_hls_2_wstrm_sfidx": "",
+        "MVAU_hls_2_wstrm_val": "",
+        "MVAU_hls_2_wstrm_mask": "",
+        "MVAU_hls_2_wstrm_rowlen": ""
       },
       "StreamingFIFO_rtl_3": "",
       "MVAU_hls_3": {
@@ -403,12 +412,12 @@
           },
           "count": {
             "direction": "O",
-            "left": "5",
+            "left": "1",
             "right": "0"
           },
           "maxcount": {
             "direction": "O",
-            "left": "5",
+            "left": "1",
             "right": "0"
           }
         }
@@ -424,6 +433,26 @@
             "mode": "Slave",
             "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
             "vlnv": "xilinx.com:interface:axis_rtl:1.0"
+          },
+          "s_axilite_sfidx": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+          },
+          "s_axilite_val": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+          },
+          "s_axilite_mask": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+          },
+          "s_axilite_rowlen": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
           }
         },
         "ports": {
@@ -443,14 +472,405 @@
             "xci_path": "ip/finn_design_MVAU_hls_0_0/finn_design_MVAU_hls_0_0.xci",
             "inst_hier_path": "MVAU_hls_0/MVAU_hls_0"
           },
-          "MVAU_hls_0_wstrm": {
-            "vlnv": "xilinx.com:module_ref:MVAU_hls_0_memstream_wrapper:1.0",
-            "xci_name": "finn_design_MVAU_hls_0_wstrm_0",
-            "xci_path": "ip/finn_design_MVAU_hls_0_wstrm_0/finn_design_MVAU_hls_0_wstrm_0.xci",
-            "inst_hier_path": "MVAU_hls_0/MVAU_hls_0_wstrm",
+          "MVAU_hls_0_wstrm_sfidx": {
+            "vlnv": "xilinx.com:module_ref:MVAU_hls_0_sfidx_memstream_wrapper:1.0",
+            "xci_name": "finn_design_MVAU_hls_0_wstrm_sfidx_0",
+            "xci_path": "ip/finn_design_MVAU_hls_0_wstrm_sfidx_0/finn_design_MVAU_hls_0_wstrm_sfidx_0.xci",
+            "inst_hier_path": "MVAU_hls_0/MVAU_hls_0_wstrm_sfidx",
             "reference_info": {
               "ref_type": "hdl",
-              "ref_name": "MVAU_hls_0_memstream_wrapper",
+              "ref_name": "MVAU_hls_0_sfidx_memstream_wrapper",
+              "boundary_crc": "0x0"
+            },
+            "interface_ports": {
+              "m_axis_0": {
+                "mode": "Master",
+                "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                "parameters": {
+                  "TDATA_NUM_BYTES": {
+                    "value": "4",
+                    "value_src": "auto"
+                  },
+                  "TDEST_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TREADY": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_TSTRB": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TKEEP": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TLAST": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "port_maps": {
+                  "TDATA": {
+                    "physical_name": "m_axis_0_tdata",
+                    "direction": "O",
+                    "left": "31",
+                    "right": "0"
+                  },
+                  "TVALID": {
+                    "physical_name": "m_axis_0_tvalid",
+                    "direction": "O"
+                  },
+                  "TREADY": {
+                    "physical_name": "m_axis_0_tready",
+                    "direction": "I"
+                  }
+                }
+              },
+              "s_axis_0": {
+                "mode": "Slave",
+                "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                "parameters": {
+                  "TDATA_NUM_BYTES": {
+                    "value": "0",
+                    "value_src": "auto"
+                  },
+                  "TDEST_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TREADY": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_TSTRB": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TKEEP": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TLAST": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "port_maps": {
+                  "TDATA": {
+                    "physical_name": "s_axis_0_tdata",
+                    "direction": "I",
+                    "left": "0",
+                    "right": "0"
+                  },
+                  "TVALID": {
+                    "physical_name": "s_axis_0_tvalid",
+                    "direction": "I"
+                  },
+                  "TREADY": {
+                    "physical_name": "s_axis_0_tready",
+                    "direction": "O"
+                  }
+                }
+              },
+              "s_axilite": {
+                "mode": "Slave",
+                "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+                "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+                "parameters": {
+                  "DATA_WIDTH": {
+                    "value": "32",
+                    "value_src": "constant"
+                  },
+                  "PROTOCOL": {
+                    "value": "AXI4LITE",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "ID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "ADDR_WIDTH": {
+                    "value": "12",
+                    "value_src": "auto"
+                  },
+                  "AWUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "ARUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "WUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "RUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "BUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "READ_WRITE_MODE": {
+                    "value": "READ_WRITE",
+                    "value_src": "constant"
+                  },
+                  "HAS_BURST": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_LOCK": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_PROT": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_CACHE": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_QOS": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_REGION": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_WSTRB": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_BRESP": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_RRESP": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "SUPPORTS_NARROW_BURST": {
+                    "value": "0",
+                    "value_src": "auto"
+                  },
+                  "NUM_READ_OUTSTANDING": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "NUM_WRITE_OUTSTANDING": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "MAX_BURST_LENGTH": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "memory_map_ref": "s_axilite",
+                "port_maps": {
+                  "AWADDR": {
+                    "physical_name": "s_axilite_AWADDR",
+                    "direction": "I",
+                    "left": "11",
+                    "right": "0"
+                  },
+                  "AWPROT": {
+                    "physical_name": "s_axilite_AWPROT",
+                    "direction": "I",
+                    "left": "2",
+                    "right": "0"
+                  },
+                  "AWVALID": {
+                    "physical_name": "s_axilite_AWVALID",
+                    "direction": "I"
+                  },
+                  "AWREADY": {
+                    "physical_name": "s_axilite_AWREADY",
+                    "direction": "O"
+                  },
+                  "WDATA": {
+                    "physical_name": "s_axilite_WDATA",
+                    "direction": "I",
+                    "left": "31",
+                    "right": "0"
+                  },
+                  "WSTRB": {
+                    "physical_name": "s_axilite_WSTRB",
+                    "direction": "I",
+                    "left": "3",
+                    "right": "0"
+                  },
+                  "WVALID": {
+                    "physical_name": "s_axilite_WVALID",
+                    "direction": "I"
+                  },
+                  "WREADY": {
+                    "physical_name": "s_axilite_WREADY",
+                    "direction": "O"
+                  },
+                  "BRESP": {
+                    "physical_name": "s_axilite_BRESP",
+                    "direction": "O",
+                    "left": "1",
+                    "right": "0"
+                  },
+                  "BVALID": {
+                    "physical_name": "s_axilite_BVALID",
+                    "direction": "O"
+                  },
+                  "BREADY": {
+                    "physical_name": "s_axilite_BREADY",
+                    "direction": "I"
+                  },
+                  "ARADDR": {
+                    "physical_name": "s_axilite_ARADDR",
+                    "direction": "I",
+                    "left": "11",
+                    "right": "0"
+                  },
+                  "ARPROT": {
+                    "physical_name": "s_axilite_ARPROT",
+                    "direction": "I",
+                    "left": "2",
+                    "right": "0"
+                  },
+                  "ARVALID": {
+                    "physical_name": "s_axilite_ARVALID",
+                    "direction": "I"
+                  },
+                  "ARREADY": {
+                    "physical_name": "s_axilite_ARREADY",
+                    "direction": "O"
+                  },
+                  "RDATA": {
+                    "physical_name": "s_axilite_RDATA",
+                    "direction": "O",
+                    "left": "31",
+                    "right": "0"
+                  },
+                  "RRESP": {
+                    "physical_name": "s_axilite_RRESP",
+                    "direction": "O",
+                    "left": "1",
+                    "right": "0"
+                  },
+                  "RVALID": {
+                    "physical_name": "s_axilite_RVALID",
+                    "direction": "O"
+                  },
+                  "RREADY": {
+                    "physical_name": "s_axilite_RREADY",
+                    "direction": "I"
+                  }
+                }
+              }
+            },
+            "ports": {
+              "ap_clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_BUSIF": {
+                    "value": "s_axilite:s_axis_0:m_axis_0",
+                    "value_src": "constant"
+                  },
+                  "ASSOCIATED_RESET": {
+                    "value": "ap_rst_n",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "ap_clk2x": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "ap_rst_n": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "constant"
+                  }
+                }
+              }
+            }
+          },
+          "MVAU_hls_0_wstrm_val": {
+            "vlnv": "xilinx.com:module_ref:MVAU_hls_0_val_memstream_wrapper:1.0",
+            "xci_name": "finn_design_MVAU_hls_0_wstrm_val_0",
+            "xci_path": "ip/finn_design_MVAU_hls_0_wstrm_val_0/finn_design_MVAU_hls_0_wstrm_val_0.xci",
+            "inst_hier_path": "MVAU_hls_0/MVAU_hls_0_wstrm_val",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "MVAU_hls_0_val_memstream_wrapper",
               "boundary_crc": "0x0"
             },
             "interface_ports": {
@@ -602,7 +1022,7 @@
                     "value_src": "constant"
                   },
                   "ADDR_WIDTH": {
-                    "value": "16",
+                    "value": "12",
                     "value_src": "auto"
                   },
                   "AWUSER_WIDTH": {
@@ -691,7 +1111,7 @@
                   "AWADDR": {
                     "physical_name": "s_axilite_AWADDR",
                     "direction": "I",
-                    "left": "15",
+                    "left": "11",
                     "right": "0"
                   },
                   "AWPROT": {
@@ -745,7 +1165,789 @@
                   "ARADDR": {
                     "physical_name": "s_axilite_ARADDR",
                     "direction": "I",
+                    "left": "11",
+                    "right": "0"
+                  },
+                  "ARPROT": {
+                    "physical_name": "s_axilite_ARPROT",
+                    "direction": "I",
+                    "left": "2",
+                    "right": "0"
+                  },
+                  "ARVALID": {
+                    "physical_name": "s_axilite_ARVALID",
+                    "direction": "I"
+                  },
+                  "ARREADY": {
+                    "physical_name": "s_axilite_ARREADY",
+                    "direction": "O"
+                  },
+                  "RDATA": {
+                    "physical_name": "s_axilite_RDATA",
+                    "direction": "O",
+                    "left": "31",
+                    "right": "0"
+                  },
+                  "RRESP": {
+                    "physical_name": "s_axilite_RRESP",
+                    "direction": "O",
+                    "left": "1",
+                    "right": "0"
+                  },
+                  "RVALID": {
+                    "physical_name": "s_axilite_RVALID",
+                    "direction": "O"
+                  },
+                  "RREADY": {
+                    "physical_name": "s_axilite_RREADY",
+                    "direction": "I"
+                  }
+                }
+              }
+            },
+            "ports": {
+              "ap_clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_BUSIF": {
+                    "value": "s_axilite:s_axis_0:m_axis_0",
+                    "value_src": "constant"
+                  },
+                  "ASSOCIATED_RESET": {
+                    "value": "ap_rst_n",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "ap_clk2x": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "ap_rst_n": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "constant"
+                  }
+                }
+              }
+            }
+          },
+          "MVAU_hls_0_wstrm_mask": {
+            "vlnv": "xilinx.com:module_ref:MVAU_hls_0_mask_memstream_wrapper:1.0",
+            "xci_name": "finn_design_MVAU_hls_0_wstrm_mask_0",
+            "xci_path": "ip/finn_design_MVAU_hls_0_wstrm_mask_0/finn_design_MVAU_hls_0_wstrm_mask_0.xci",
+            "inst_hier_path": "MVAU_hls_0/MVAU_hls_0_wstrm_mask",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "MVAU_hls_0_mask_memstream_wrapper",
+              "boundary_crc": "0x0"
+            },
+            "interface_ports": {
+              "m_axis_0": {
+                "mode": "Master",
+                "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                "parameters": {
+                  "TDATA_NUM_BYTES": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "TDEST_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TREADY": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_TSTRB": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TKEEP": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TLAST": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "port_maps": {
+                  "TDATA": {
+                    "physical_name": "m_axis_0_tdata",
+                    "direction": "O",
+                    "left": "7",
+                    "right": "0"
+                  },
+                  "TVALID": {
+                    "physical_name": "m_axis_0_tvalid",
+                    "direction": "O"
+                  },
+                  "TREADY": {
+                    "physical_name": "m_axis_0_tready",
+                    "direction": "I"
+                  }
+                }
+              },
+              "s_axis_0": {
+                "mode": "Slave",
+                "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                "parameters": {
+                  "TDATA_NUM_BYTES": {
+                    "value": "0",
+                    "value_src": "auto"
+                  },
+                  "TDEST_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TREADY": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_TSTRB": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TKEEP": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TLAST": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "port_maps": {
+                  "TDATA": {
+                    "physical_name": "s_axis_0_tdata",
+                    "direction": "I",
+                    "left": "0",
+                    "right": "0"
+                  },
+                  "TVALID": {
+                    "physical_name": "s_axis_0_tvalid",
+                    "direction": "I"
+                  },
+                  "TREADY": {
+                    "physical_name": "s_axis_0_tready",
+                    "direction": "O"
+                  }
+                }
+              },
+              "s_axilite": {
+                "mode": "Slave",
+                "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+                "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+                "parameters": {
+                  "DATA_WIDTH": {
+                    "value": "32",
+                    "value_src": "constant"
+                  },
+                  "PROTOCOL": {
+                    "value": "AXI4LITE",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "ID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "ADDR_WIDTH": {
+                    "value": "12",
+                    "value_src": "auto"
+                  },
+                  "AWUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "ARUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "WUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "RUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "BUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "READ_WRITE_MODE": {
+                    "value": "READ_WRITE",
+                    "value_src": "constant"
+                  },
+                  "HAS_BURST": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_LOCK": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_PROT": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_CACHE": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_QOS": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_REGION": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_WSTRB": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_BRESP": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_RRESP": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "SUPPORTS_NARROW_BURST": {
+                    "value": "0",
+                    "value_src": "auto"
+                  },
+                  "NUM_READ_OUTSTANDING": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "NUM_WRITE_OUTSTANDING": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "MAX_BURST_LENGTH": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "memory_map_ref": "s_axilite",
+                "port_maps": {
+                  "AWADDR": {
+                    "physical_name": "s_axilite_AWADDR",
+                    "direction": "I",
+                    "left": "11",
+                    "right": "0"
+                  },
+                  "AWPROT": {
+                    "physical_name": "s_axilite_AWPROT",
+                    "direction": "I",
+                    "left": "2",
+                    "right": "0"
+                  },
+                  "AWVALID": {
+                    "physical_name": "s_axilite_AWVALID",
+                    "direction": "I"
+                  },
+                  "AWREADY": {
+                    "physical_name": "s_axilite_AWREADY",
+                    "direction": "O"
+                  },
+                  "WDATA": {
+                    "physical_name": "s_axilite_WDATA",
+                    "direction": "I",
+                    "left": "31",
+                    "right": "0"
+                  },
+                  "WSTRB": {
+                    "physical_name": "s_axilite_WSTRB",
+                    "direction": "I",
+                    "left": "3",
+                    "right": "0"
+                  },
+                  "WVALID": {
+                    "physical_name": "s_axilite_WVALID",
+                    "direction": "I"
+                  },
+                  "WREADY": {
+                    "physical_name": "s_axilite_WREADY",
+                    "direction": "O"
+                  },
+                  "BRESP": {
+                    "physical_name": "s_axilite_BRESP",
+                    "direction": "O",
+                    "left": "1",
+                    "right": "0"
+                  },
+                  "BVALID": {
+                    "physical_name": "s_axilite_BVALID",
+                    "direction": "O"
+                  },
+                  "BREADY": {
+                    "physical_name": "s_axilite_BREADY",
+                    "direction": "I"
+                  },
+                  "ARADDR": {
+                    "physical_name": "s_axilite_ARADDR",
+                    "direction": "I",
+                    "left": "11",
+                    "right": "0"
+                  },
+                  "ARPROT": {
+                    "physical_name": "s_axilite_ARPROT",
+                    "direction": "I",
+                    "left": "2",
+                    "right": "0"
+                  },
+                  "ARVALID": {
+                    "physical_name": "s_axilite_ARVALID",
+                    "direction": "I"
+                  },
+                  "ARREADY": {
+                    "physical_name": "s_axilite_ARREADY",
+                    "direction": "O"
+                  },
+                  "RDATA": {
+                    "physical_name": "s_axilite_RDATA",
+                    "direction": "O",
+                    "left": "31",
+                    "right": "0"
+                  },
+                  "RRESP": {
+                    "physical_name": "s_axilite_RRESP",
+                    "direction": "O",
+                    "left": "1",
+                    "right": "0"
+                  },
+                  "RVALID": {
+                    "physical_name": "s_axilite_RVALID",
+                    "direction": "O"
+                  },
+                  "RREADY": {
+                    "physical_name": "s_axilite_RREADY",
+                    "direction": "I"
+                  }
+                }
+              }
+            },
+            "ports": {
+              "ap_clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_BUSIF": {
+                    "value": "s_axilite:s_axis_0:m_axis_0",
+                    "value_src": "constant"
+                  },
+                  "ASSOCIATED_RESET": {
+                    "value": "ap_rst_n",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "ap_clk2x": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "ap_rst_n": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "constant"
+                  }
+                }
+              }
+            }
+          },
+          "MVAU_hls_0_wstrm_rowlen": {
+            "vlnv": "xilinx.com:module_ref:MVAU_hls_0_rowlen_memstream_wrapper:1.0",
+            "xci_name": "finn_design_MVAU_hls_0_wstrm_rowlen_0",
+            "xci_path": "ip/finn_design_MVAU_hls_0_wstrm_rowlen_0/finn_design_MVAU_hls_0_wstrm_rowlen_0.xci",
+            "inst_hier_path": "MVAU_hls_0/MVAU_hls_0_wstrm_rowlen",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "MVAU_hls_0_rowlen_memstream_wrapper",
+              "boundary_crc": "0x0"
+            },
+            "interface_ports": {
+              "m_axis_0": {
+                "mode": "Master",
+                "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                "parameters": {
+                  "TDATA_NUM_BYTES": {
+                    "value": "2",
+                    "value_src": "auto"
+                  },
+                  "TDEST_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TREADY": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_TSTRB": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TKEEP": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TLAST": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "port_maps": {
+                  "TDATA": {
+                    "physical_name": "m_axis_0_tdata",
+                    "direction": "O",
                     "left": "15",
+                    "right": "0"
+                  },
+                  "TVALID": {
+                    "physical_name": "m_axis_0_tvalid",
+                    "direction": "O"
+                  },
+                  "TREADY": {
+                    "physical_name": "m_axis_0_tready",
+                    "direction": "I"
+                  }
+                }
+              },
+              "s_axis_0": {
+                "mode": "Slave",
+                "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                "parameters": {
+                  "TDATA_NUM_BYTES": {
+                    "value": "0",
+                    "value_src": "auto"
+                  },
+                  "TDEST_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TREADY": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_TSTRB": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TKEEP": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TLAST": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "port_maps": {
+                  "TDATA": {
+                    "physical_name": "s_axis_0_tdata",
+                    "direction": "I",
+                    "left": "0",
+                    "right": "0"
+                  },
+                  "TVALID": {
+                    "physical_name": "s_axis_0_tvalid",
+                    "direction": "I"
+                  },
+                  "TREADY": {
+                    "physical_name": "s_axis_0_tready",
+                    "direction": "O"
+                  }
+                }
+              },
+              "s_axilite": {
+                "mode": "Slave",
+                "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+                "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+                "parameters": {
+                  "DATA_WIDTH": {
+                    "value": "32",
+                    "value_src": "constant"
+                  },
+                  "PROTOCOL": {
+                    "value": "AXI4LITE",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "ID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "ADDR_WIDTH": {
+                    "value": "12",
+                    "value_src": "auto"
+                  },
+                  "AWUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "ARUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "WUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "RUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "BUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "READ_WRITE_MODE": {
+                    "value": "READ_WRITE",
+                    "value_src": "constant"
+                  },
+                  "HAS_BURST": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_LOCK": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_PROT": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_CACHE": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_QOS": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_REGION": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_WSTRB": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_BRESP": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_RRESP": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "SUPPORTS_NARROW_BURST": {
+                    "value": "0",
+                    "value_src": "auto"
+                  },
+                  "NUM_READ_OUTSTANDING": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "NUM_WRITE_OUTSTANDING": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "MAX_BURST_LENGTH": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "memory_map_ref": "s_axilite",
+                "port_maps": {
+                  "AWADDR": {
+                    "physical_name": "s_axilite_AWADDR",
+                    "direction": "I",
+                    "left": "11",
+                    "right": "0"
+                  },
+                  "AWPROT": {
+                    "physical_name": "s_axilite_AWPROT",
+                    "direction": "I",
+                    "left": "2",
+                    "right": "0"
+                  },
+                  "AWVALID": {
+                    "physical_name": "s_axilite_AWVALID",
+                    "direction": "I"
+                  },
+                  "AWREADY": {
+                    "physical_name": "s_axilite_AWREADY",
+                    "direction": "O"
+                  },
+                  "WDATA": {
+                    "physical_name": "s_axilite_WDATA",
+                    "direction": "I",
+                    "left": "31",
+                    "right": "0"
+                  },
+                  "WSTRB": {
+                    "physical_name": "s_axilite_WSTRB",
+                    "direction": "I",
+                    "left": "3",
+                    "right": "0"
+                  },
+                  "WVALID": {
+                    "physical_name": "s_axilite_WVALID",
+                    "direction": "I"
+                  },
+                  "WREADY": {
+                    "physical_name": "s_axilite_WREADY",
+                    "direction": "O"
+                  },
+                  "BRESP": {
+                    "physical_name": "s_axilite_BRESP",
+                    "direction": "O",
+                    "left": "1",
+                    "right": "0"
+                  },
+                  "BVALID": {
+                    "physical_name": "s_axilite_BVALID",
+                    "direction": "O"
+                  },
+                  "BREADY": {
+                    "physical_name": "s_axilite_BREADY",
+                    "direction": "I"
+                  },
+                  "ARADDR": {
+                    "physical_name": "s_axilite_ARADDR",
+                    "direction": "I",
+                    "left": "11",
                     "right": "0"
                   },
                   "ARPROT": {
@@ -842,16 +2044,58 @@
               "MVAU_hls_0/out0_V"
             ]
           },
-          "MVAU_hls_0_wstrm_m_axis_0": {
+          "MVAU_hls_0_wstrm_mask_m_axis_0": {
             "interface_ports": [
-              "MVAU_hls_0_wstrm/m_axis_0",
-              "MVAU_hls_0/in1_V"
+              "MVAU_hls_0_wstrm_mask/m_axis_0",
+              "MVAU_hls_0/mask_V"
+            ]
+          },
+          "MVAU_hls_0_wstrm_rowlen_m_axis_0": {
+            "interface_ports": [
+              "MVAU_hls_0_wstrm_rowlen/m_axis_0",
+              "MVAU_hls_0/rowlen_V"
+            ]
+          },
+          "MVAU_hls_0_wstrm_sfidx_m_axis_0": {
+            "interface_ports": [
+              "MVAU_hls_0_wstrm_sfidx/m_axis_0",
+              "MVAU_hls_0/sfidx_V"
+            ]
+          },
+          "MVAU_hls_0_wstrm_val_m_axis_0": {
+            "interface_ports": [
+              "MVAU_hls_0_wstrm_val/m_axis_0",
+              "MVAU_hls_0/val_V"
             ]
           },
           "in0_V_1": {
             "interface_ports": [
               "in0_V",
               "MVAU_hls_0/in0_V"
+            ]
+          },
+          "s_axilite_mask_1": {
+            "interface_ports": [
+              "s_axilite_mask",
+              "MVAU_hls_0_wstrm_mask/s_axilite"
+            ]
+          },
+          "s_axilite_rowlen_1": {
+            "interface_ports": [
+              "s_axilite_rowlen",
+              "MVAU_hls_0_wstrm_rowlen/s_axilite"
+            ]
+          },
+          "s_axilite_sfidx_1": {
+            "interface_ports": [
+              "s_axilite_sfidx",
+              "MVAU_hls_0_wstrm_sfidx/s_axilite"
+            ]
+          },
+          "s_axilite_val_1": {
+            "interface_ports": [
+              "s_axilite_val",
+              "MVAU_hls_0_wstrm_val/s_axilite"
             ]
           }
         },
@@ -860,15 +2104,24 @@
             "ports": [
               "ap_clk",
               "MVAU_hls_0/ap_clk",
-              "MVAU_hls_0_wstrm/ap_clk",
-              "MVAU_hls_0_wstrm/ap_clk2x"
+              "MVAU_hls_0_wstrm_sfidx/ap_clk",
+              "MVAU_hls_0_wstrm_sfidx/ap_clk2x",
+              "MVAU_hls_0_wstrm_val/ap_clk",
+              "MVAU_hls_0_wstrm_val/ap_clk2x",
+              "MVAU_hls_0_wstrm_mask/ap_clk",
+              "MVAU_hls_0_wstrm_mask/ap_clk2x",
+              "MVAU_hls_0_wstrm_rowlen/ap_clk",
+              "MVAU_hls_0_wstrm_rowlen/ap_clk2x"
             ]
           },
           "ap_rst_n_1": {
             "ports": [
               "ap_rst_n",
               "MVAU_hls_0/ap_rst_n",
-              "MVAU_hls_0_wstrm/ap_rst_n"
+              "MVAU_hls_0_wstrm_sfidx/ap_rst_n",
+              "MVAU_hls_0_wstrm_val/ap_rst_n",
+              "MVAU_hls_0_wstrm_mask/ap_rst_n",
+              "MVAU_hls_0_wstrm_rowlen/ap_rst_n"
             ]
           }
         }
@@ -1046,12 +2299,12 @@
           },
           "count": {
             "direction": "O",
-            "left": "5",
+            "left": "1",
             "right": "0"
           },
           "maxcount": {
             "direction": "O",
-            "left": "5",
+            "left": "1",
             "right": "0"
           }
         }
@@ -1067,6 +2320,26 @@
             "mode": "Slave",
             "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
             "vlnv": "xilinx.com:interface:axis_rtl:1.0"
+          },
+          "s_axilite_sfidx": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+          },
+          "s_axilite_val": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+          },
+          "s_axilite_mask": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+          },
+          "s_axilite_rowlen": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
           }
         },
         "ports": {
@@ -1086,14 +2359,14 @@
             "xci_path": "ip/finn_design_MVAU_hls_1_0/finn_design_MVAU_hls_1_0.xci",
             "inst_hier_path": "MVAU_hls_1/MVAU_hls_1"
           },
-          "MVAU_hls_1_wstrm": {
-            "vlnv": "xilinx.com:module_ref:MVAU_hls_1_memstream_wrapper:1.0",
-            "xci_name": "finn_design_MVAU_hls_1_wstrm_0",
-            "xci_path": "ip/finn_design_MVAU_hls_1_wstrm_0/finn_design_MVAU_hls_1_wstrm_0.xci",
-            "inst_hier_path": "MVAU_hls_1/MVAU_hls_1_wstrm",
+          "MVAU_hls_1_wstrm_sfidx": {
+            "vlnv": "xilinx.com:module_ref:MVAU_hls_1_sfidx_memstream_wrapper:1.0",
+            "xci_name": "finn_design_MVAU_hls_1_wstrm_sfidx_0",
+            "xci_path": "ip/finn_design_MVAU_hls_1_wstrm_sfidx_0/finn_design_MVAU_hls_1_wstrm_sfidx_0.xci",
+            "inst_hier_path": "MVAU_hls_1/MVAU_hls_1_wstrm_sfidx",
             "reference_info": {
               "ref_type": "hdl",
-              "ref_name": "MVAU_hls_1_memstream_wrapper",
+              "ref_name": "MVAU_hls_1_sfidx_memstream_wrapper",
               "boundary_crc": "0x0"
             },
             "interface_ports": {
@@ -1245,7 +2518,7 @@
                     "value_src": "constant"
                   },
                   "ADDR_WIDTH": {
-                    "value": "14",
+                    "value": "8",
                     "value_src": "auto"
                   },
                   "AWUSER_WIDTH": {
@@ -1334,7 +2607,7 @@
                   "AWADDR": {
                     "physical_name": "s_axilite_AWADDR",
                     "direction": "I",
-                    "left": "13",
+                    "left": "7",
                     "right": "0"
                   },
                   "AWPROT": {
@@ -1388,7 +2661,1180 @@
                   "ARADDR": {
                     "physical_name": "s_axilite_ARADDR",
                     "direction": "I",
-                    "left": "13",
+                    "left": "7",
+                    "right": "0"
+                  },
+                  "ARPROT": {
+                    "physical_name": "s_axilite_ARPROT",
+                    "direction": "I",
+                    "left": "2",
+                    "right": "0"
+                  },
+                  "ARVALID": {
+                    "physical_name": "s_axilite_ARVALID",
+                    "direction": "I"
+                  },
+                  "ARREADY": {
+                    "physical_name": "s_axilite_ARREADY",
+                    "direction": "O"
+                  },
+                  "RDATA": {
+                    "physical_name": "s_axilite_RDATA",
+                    "direction": "O",
+                    "left": "31",
+                    "right": "0"
+                  },
+                  "RRESP": {
+                    "physical_name": "s_axilite_RRESP",
+                    "direction": "O",
+                    "left": "1",
+                    "right": "0"
+                  },
+                  "RVALID": {
+                    "physical_name": "s_axilite_RVALID",
+                    "direction": "O"
+                  },
+                  "RREADY": {
+                    "physical_name": "s_axilite_RREADY",
+                    "direction": "I"
+                  }
+                }
+              }
+            },
+            "ports": {
+              "ap_clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_BUSIF": {
+                    "value": "s_axilite:s_axis_0:m_axis_0",
+                    "value_src": "constant"
+                  },
+                  "ASSOCIATED_RESET": {
+                    "value": "ap_rst_n",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "ap_clk2x": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "ap_rst_n": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "constant"
+                  }
+                }
+              }
+            }
+          },
+          "MVAU_hls_1_wstrm_val": {
+            "vlnv": "xilinx.com:module_ref:MVAU_hls_1_val_memstream_wrapper:1.0",
+            "xci_name": "finn_design_MVAU_hls_1_wstrm_val_0",
+            "xci_path": "ip/finn_design_MVAU_hls_1_wstrm_val_0/finn_design_MVAU_hls_1_wstrm_val_0.xci",
+            "inst_hier_path": "MVAU_hls_1/MVAU_hls_1_wstrm_val",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "MVAU_hls_1_val_memstream_wrapper",
+              "boundary_crc": "0x0"
+            },
+            "interface_ports": {
+              "m_axis_0": {
+                "mode": "Master",
+                "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                "parameters": {
+                  "TDATA_NUM_BYTES": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "TDEST_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TREADY": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_TSTRB": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TKEEP": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TLAST": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "port_maps": {
+                  "TDATA": {
+                    "physical_name": "m_axis_0_tdata",
+                    "direction": "O",
+                    "left": "7",
+                    "right": "0"
+                  },
+                  "TVALID": {
+                    "physical_name": "m_axis_0_tvalid",
+                    "direction": "O"
+                  },
+                  "TREADY": {
+                    "physical_name": "m_axis_0_tready",
+                    "direction": "I"
+                  }
+                }
+              },
+              "s_axis_0": {
+                "mode": "Slave",
+                "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                "parameters": {
+                  "TDATA_NUM_BYTES": {
+                    "value": "0",
+                    "value_src": "auto"
+                  },
+                  "TDEST_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TREADY": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_TSTRB": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TKEEP": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TLAST": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "port_maps": {
+                  "TDATA": {
+                    "physical_name": "s_axis_0_tdata",
+                    "direction": "I",
+                    "left": "0",
+                    "right": "0"
+                  },
+                  "TVALID": {
+                    "physical_name": "s_axis_0_tvalid",
+                    "direction": "I"
+                  },
+                  "TREADY": {
+                    "physical_name": "s_axis_0_tready",
+                    "direction": "O"
+                  }
+                }
+              },
+              "s_axilite": {
+                "mode": "Slave",
+                "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+                "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+                "parameters": {
+                  "DATA_WIDTH": {
+                    "value": "32",
+                    "value_src": "constant"
+                  },
+                  "PROTOCOL": {
+                    "value": "AXI4LITE",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "ID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "ADDR_WIDTH": {
+                    "value": "8",
+                    "value_src": "auto"
+                  },
+                  "AWUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "ARUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "WUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "RUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "BUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "READ_WRITE_MODE": {
+                    "value": "READ_WRITE",
+                    "value_src": "constant"
+                  },
+                  "HAS_BURST": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_LOCK": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_PROT": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_CACHE": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_QOS": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_REGION": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_WSTRB": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_BRESP": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_RRESP": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "SUPPORTS_NARROW_BURST": {
+                    "value": "0",
+                    "value_src": "auto"
+                  },
+                  "NUM_READ_OUTSTANDING": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "NUM_WRITE_OUTSTANDING": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "MAX_BURST_LENGTH": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "memory_map_ref": "s_axilite",
+                "port_maps": {
+                  "AWADDR": {
+                    "physical_name": "s_axilite_AWADDR",
+                    "direction": "I",
+                    "left": "7",
+                    "right": "0"
+                  },
+                  "AWPROT": {
+                    "physical_name": "s_axilite_AWPROT",
+                    "direction": "I",
+                    "left": "2",
+                    "right": "0"
+                  },
+                  "AWVALID": {
+                    "physical_name": "s_axilite_AWVALID",
+                    "direction": "I"
+                  },
+                  "AWREADY": {
+                    "physical_name": "s_axilite_AWREADY",
+                    "direction": "O"
+                  },
+                  "WDATA": {
+                    "physical_name": "s_axilite_WDATA",
+                    "direction": "I",
+                    "left": "31",
+                    "right": "0"
+                  },
+                  "WSTRB": {
+                    "physical_name": "s_axilite_WSTRB",
+                    "direction": "I",
+                    "left": "3",
+                    "right": "0"
+                  },
+                  "WVALID": {
+                    "physical_name": "s_axilite_WVALID",
+                    "direction": "I"
+                  },
+                  "WREADY": {
+                    "physical_name": "s_axilite_WREADY",
+                    "direction": "O"
+                  },
+                  "BRESP": {
+                    "physical_name": "s_axilite_BRESP",
+                    "direction": "O",
+                    "left": "1",
+                    "right": "0"
+                  },
+                  "BVALID": {
+                    "physical_name": "s_axilite_BVALID",
+                    "direction": "O"
+                  },
+                  "BREADY": {
+                    "physical_name": "s_axilite_BREADY",
+                    "direction": "I"
+                  },
+                  "ARADDR": {
+                    "physical_name": "s_axilite_ARADDR",
+                    "direction": "I",
+                    "left": "7",
+                    "right": "0"
+                  },
+                  "ARPROT": {
+                    "physical_name": "s_axilite_ARPROT",
+                    "direction": "I",
+                    "left": "2",
+                    "right": "0"
+                  },
+                  "ARVALID": {
+                    "physical_name": "s_axilite_ARVALID",
+                    "direction": "I"
+                  },
+                  "ARREADY": {
+                    "physical_name": "s_axilite_ARREADY",
+                    "direction": "O"
+                  },
+                  "RDATA": {
+                    "physical_name": "s_axilite_RDATA",
+                    "direction": "O",
+                    "left": "31",
+                    "right": "0"
+                  },
+                  "RRESP": {
+                    "physical_name": "s_axilite_RRESP",
+                    "direction": "O",
+                    "left": "1",
+                    "right": "0"
+                  },
+                  "RVALID": {
+                    "physical_name": "s_axilite_RVALID",
+                    "direction": "O"
+                  },
+                  "RREADY": {
+                    "physical_name": "s_axilite_RREADY",
+                    "direction": "I"
+                  }
+                }
+              }
+            },
+            "ports": {
+              "ap_clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_BUSIF": {
+                    "value": "s_axilite:s_axis_0:m_axis_0",
+                    "value_src": "constant"
+                  },
+                  "ASSOCIATED_RESET": {
+                    "value": "ap_rst_n",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "ap_clk2x": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "ap_rst_n": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "constant"
+                  }
+                }
+              }
+            }
+          },
+          "MVAU_hls_1_wstrm_mask": {
+            "vlnv": "xilinx.com:module_ref:MVAU_hls_1_mask_memstream_wrapper:1.0",
+            "xci_name": "finn_design_MVAU_hls_1_wstrm_mask_0",
+            "xci_path": "ip/finn_design_MVAU_hls_1_wstrm_mask_0/finn_design_MVAU_hls_1_wstrm_mask_0.xci",
+            "inst_hier_path": "MVAU_hls_1/MVAU_hls_1_wstrm_mask",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "MVAU_hls_1_mask_memstream_wrapper",
+              "boundary_crc": "0x0"
+            },
+            "interface_ports": {
+              "m_axis_0": {
+                "mode": "Master",
+                "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                "parameters": {
+                  "TDATA_NUM_BYTES": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "TDEST_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TREADY": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_TSTRB": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TKEEP": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TLAST": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "port_maps": {
+                  "TDATA": {
+                    "physical_name": "m_axis_0_tdata",
+                    "direction": "O",
+                    "left": "7",
+                    "right": "0"
+                  },
+                  "TVALID": {
+                    "physical_name": "m_axis_0_tvalid",
+                    "direction": "O"
+                  },
+                  "TREADY": {
+                    "physical_name": "m_axis_0_tready",
+                    "direction": "I"
+                  }
+                }
+              },
+              "s_axis_0": {
+                "mode": "Slave",
+                "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                "parameters": {
+                  "TDATA_NUM_BYTES": {
+                    "value": "0",
+                    "value_src": "auto"
+                  },
+                  "TDEST_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TREADY": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_TSTRB": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TKEEP": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TLAST": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "port_maps": {
+                  "TDATA": {
+                    "physical_name": "s_axis_0_tdata",
+                    "direction": "I",
+                    "left": "0",
+                    "right": "0"
+                  },
+                  "TVALID": {
+                    "physical_name": "s_axis_0_tvalid",
+                    "direction": "I"
+                  },
+                  "TREADY": {
+                    "physical_name": "s_axis_0_tready",
+                    "direction": "O"
+                  }
+                }
+              },
+              "s_axilite": {
+                "mode": "Slave",
+                "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+                "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+                "parameters": {
+                  "DATA_WIDTH": {
+                    "value": "32",
+                    "value_src": "constant"
+                  },
+                  "PROTOCOL": {
+                    "value": "AXI4LITE",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "ID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "ADDR_WIDTH": {
+                    "value": "8",
+                    "value_src": "auto"
+                  },
+                  "AWUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "ARUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "WUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "RUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "BUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "READ_WRITE_MODE": {
+                    "value": "READ_WRITE",
+                    "value_src": "constant"
+                  },
+                  "HAS_BURST": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_LOCK": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_PROT": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_CACHE": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_QOS": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_REGION": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_WSTRB": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_BRESP": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_RRESP": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "SUPPORTS_NARROW_BURST": {
+                    "value": "0",
+                    "value_src": "auto"
+                  },
+                  "NUM_READ_OUTSTANDING": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "NUM_WRITE_OUTSTANDING": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "MAX_BURST_LENGTH": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "memory_map_ref": "s_axilite",
+                "port_maps": {
+                  "AWADDR": {
+                    "physical_name": "s_axilite_AWADDR",
+                    "direction": "I",
+                    "left": "7",
+                    "right": "0"
+                  },
+                  "AWPROT": {
+                    "physical_name": "s_axilite_AWPROT",
+                    "direction": "I",
+                    "left": "2",
+                    "right": "0"
+                  },
+                  "AWVALID": {
+                    "physical_name": "s_axilite_AWVALID",
+                    "direction": "I"
+                  },
+                  "AWREADY": {
+                    "physical_name": "s_axilite_AWREADY",
+                    "direction": "O"
+                  },
+                  "WDATA": {
+                    "physical_name": "s_axilite_WDATA",
+                    "direction": "I",
+                    "left": "31",
+                    "right": "0"
+                  },
+                  "WSTRB": {
+                    "physical_name": "s_axilite_WSTRB",
+                    "direction": "I",
+                    "left": "3",
+                    "right": "0"
+                  },
+                  "WVALID": {
+                    "physical_name": "s_axilite_WVALID",
+                    "direction": "I"
+                  },
+                  "WREADY": {
+                    "physical_name": "s_axilite_WREADY",
+                    "direction": "O"
+                  },
+                  "BRESP": {
+                    "physical_name": "s_axilite_BRESP",
+                    "direction": "O",
+                    "left": "1",
+                    "right": "0"
+                  },
+                  "BVALID": {
+                    "physical_name": "s_axilite_BVALID",
+                    "direction": "O"
+                  },
+                  "BREADY": {
+                    "physical_name": "s_axilite_BREADY",
+                    "direction": "I"
+                  },
+                  "ARADDR": {
+                    "physical_name": "s_axilite_ARADDR",
+                    "direction": "I",
+                    "left": "7",
+                    "right": "0"
+                  },
+                  "ARPROT": {
+                    "physical_name": "s_axilite_ARPROT",
+                    "direction": "I",
+                    "left": "2",
+                    "right": "0"
+                  },
+                  "ARVALID": {
+                    "physical_name": "s_axilite_ARVALID",
+                    "direction": "I"
+                  },
+                  "ARREADY": {
+                    "physical_name": "s_axilite_ARREADY",
+                    "direction": "O"
+                  },
+                  "RDATA": {
+                    "physical_name": "s_axilite_RDATA",
+                    "direction": "O",
+                    "left": "31",
+                    "right": "0"
+                  },
+                  "RRESP": {
+                    "physical_name": "s_axilite_RRESP",
+                    "direction": "O",
+                    "left": "1",
+                    "right": "0"
+                  },
+                  "RVALID": {
+                    "physical_name": "s_axilite_RVALID",
+                    "direction": "O"
+                  },
+                  "RREADY": {
+                    "physical_name": "s_axilite_RREADY",
+                    "direction": "I"
+                  }
+                }
+              }
+            },
+            "ports": {
+              "ap_clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_BUSIF": {
+                    "value": "s_axilite:s_axis_0:m_axis_0",
+                    "value_src": "constant"
+                  },
+                  "ASSOCIATED_RESET": {
+                    "value": "ap_rst_n",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "ap_clk2x": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "ap_rst_n": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "constant"
+                  }
+                }
+              }
+            }
+          },
+          "MVAU_hls_1_wstrm_rowlen": {
+            "vlnv": "xilinx.com:module_ref:MVAU_hls_1_rowlen_memstream_wrapper:1.0",
+            "xci_name": "finn_design_MVAU_hls_1_wstrm_rowlen_0",
+            "xci_path": "ip/finn_design_MVAU_hls_1_wstrm_rowlen_0/finn_design_MVAU_hls_1_wstrm_rowlen_0.xci",
+            "inst_hier_path": "MVAU_hls_1/MVAU_hls_1_wstrm_rowlen",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "MVAU_hls_1_rowlen_memstream_wrapper",
+              "boundary_crc": "0x0"
+            },
+            "interface_ports": {
+              "m_axis_0": {
+                "mode": "Master",
+                "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                "parameters": {
+                  "TDATA_NUM_BYTES": {
+                    "value": "2",
+                    "value_src": "auto"
+                  },
+                  "TDEST_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TREADY": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_TSTRB": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TKEEP": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TLAST": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "port_maps": {
+                  "TDATA": {
+                    "physical_name": "m_axis_0_tdata",
+                    "direction": "O",
+                    "left": "15",
+                    "right": "0"
+                  },
+                  "TVALID": {
+                    "physical_name": "m_axis_0_tvalid",
+                    "direction": "O"
+                  },
+                  "TREADY": {
+                    "physical_name": "m_axis_0_tready",
+                    "direction": "I"
+                  }
+                }
+              },
+              "s_axis_0": {
+                "mode": "Slave",
+                "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                "parameters": {
+                  "TDATA_NUM_BYTES": {
+                    "value": "0",
+                    "value_src": "auto"
+                  },
+                  "TDEST_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TREADY": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_TSTRB": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TKEEP": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TLAST": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "port_maps": {
+                  "TDATA": {
+                    "physical_name": "s_axis_0_tdata",
+                    "direction": "I",
+                    "left": "0",
+                    "right": "0"
+                  },
+                  "TVALID": {
+                    "physical_name": "s_axis_0_tvalid",
+                    "direction": "I"
+                  },
+                  "TREADY": {
+                    "physical_name": "s_axis_0_tready",
+                    "direction": "O"
+                  }
+                }
+              },
+              "s_axilite": {
+                "mode": "Slave",
+                "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+                "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+                "parameters": {
+                  "DATA_WIDTH": {
+                    "value": "32",
+                    "value_src": "constant"
+                  },
+                  "PROTOCOL": {
+                    "value": "AXI4LITE",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "ID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "ADDR_WIDTH": {
+                    "value": "8",
+                    "value_src": "auto"
+                  },
+                  "AWUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "ARUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "WUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "RUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "BUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "READ_WRITE_MODE": {
+                    "value": "READ_WRITE",
+                    "value_src": "constant"
+                  },
+                  "HAS_BURST": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_LOCK": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_PROT": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_CACHE": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_QOS": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_REGION": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_WSTRB": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_BRESP": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_RRESP": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "SUPPORTS_NARROW_BURST": {
+                    "value": "0",
+                    "value_src": "auto"
+                  },
+                  "NUM_READ_OUTSTANDING": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "NUM_WRITE_OUTSTANDING": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "MAX_BURST_LENGTH": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "memory_map_ref": "s_axilite",
+                "port_maps": {
+                  "AWADDR": {
+                    "physical_name": "s_axilite_AWADDR",
+                    "direction": "I",
+                    "left": "7",
+                    "right": "0"
+                  },
+                  "AWPROT": {
+                    "physical_name": "s_axilite_AWPROT",
+                    "direction": "I",
+                    "left": "2",
+                    "right": "0"
+                  },
+                  "AWVALID": {
+                    "physical_name": "s_axilite_AWVALID",
+                    "direction": "I"
+                  },
+                  "AWREADY": {
+                    "physical_name": "s_axilite_AWREADY",
+                    "direction": "O"
+                  },
+                  "WDATA": {
+                    "physical_name": "s_axilite_WDATA",
+                    "direction": "I",
+                    "left": "31",
+                    "right": "0"
+                  },
+                  "WSTRB": {
+                    "physical_name": "s_axilite_WSTRB",
+                    "direction": "I",
+                    "left": "3",
+                    "right": "0"
+                  },
+                  "WVALID": {
+                    "physical_name": "s_axilite_WVALID",
+                    "direction": "I"
+                  },
+                  "WREADY": {
+                    "physical_name": "s_axilite_WREADY",
+                    "direction": "O"
+                  },
+                  "BRESP": {
+                    "physical_name": "s_axilite_BRESP",
+                    "direction": "O",
+                    "left": "1",
+                    "right": "0"
+                  },
+                  "BVALID": {
+                    "physical_name": "s_axilite_BVALID",
+                    "direction": "O"
+                  },
+                  "BREADY": {
+                    "physical_name": "s_axilite_BREADY",
+                    "direction": "I"
+                  },
+                  "ARADDR": {
+                    "physical_name": "s_axilite_ARADDR",
+                    "direction": "I",
+                    "left": "7",
                     "right": "0"
                   },
                   "ARPROT": {
@@ -1485,16 +3931,58 @@
               "MVAU_hls_1/out0_V"
             ]
           },
-          "MVAU_hls_1_wstrm_m_axis_0": {
+          "MVAU_hls_1_wstrm_mask_m_axis_0": {
             "interface_ports": [
-              "MVAU_hls_1_wstrm/m_axis_0",
-              "MVAU_hls_1/in1_V"
+              "MVAU_hls_1_wstrm_mask/m_axis_0",
+              "MVAU_hls_1/mask_V"
+            ]
+          },
+          "MVAU_hls_1_wstrm_rowlen_m_axis_0": {
+            "interface_ports": [
+              "MVAU_hls_1_wstrm_rowlen/m_axis_0",
+              "MVAU_hls_1/rowlen_V"
+            ]
+          },
+          "MVAU_hls_1_wstrm_sfidx_m_axis_0": {
+            "interface_ports": [
+              "MVAU_hls_1_wstrm_sfidx/m_axis_0",
+              "MVAU_hls_1/sfidx_V"
+            ]
+          },
+          "MVAU_hls_1_wstrm_val_m_axis_0": {
+            "interface_ports": [
+              "MVAU_hls_1_wstrm_val/m_axis_0",
+              "MVAU_hls_1/val_V"
             ]
           },
           "in0_V_1": {
             "interface_ports": [
               "in0_V",
               "MVAU_hls_1/in0_V"
+            ]
+          },
+          "s_axilite_mask_1": {
+            "interface_ports": [
+              "s_axilite_mask",
+              "MVAU_hls_1_wstrm_mask/s_axilite"
+            ]
+          },
+          "s_axilite_rowlen_1": {
+            "interface_ports": [
+              "s_axilite_rowlen",
+              "MVAU_hls_1_wstrm_rowlen/s_axilite"
+            ]
+          },
+          "s_axilite_sfidx_1": {
+            "interface_ports": [
+              "s_axilite_sfidx",
+              "MVAU_hls_1_wstrm_sfidx/s_axilite"
+            ]
+          },
+          "s_axilite_val_1": {
+            "interface_ports": [
+              "s_axilite_val",
+              "MVAU_hls_1_wstrm_val/s_axilite"
             ]
           }
         },
@@ -1503,15 +3991,24 @@
             "ports": [
               "ap_clk",
               "MVAU_hls_1/ap_clk",
-              "MVAU_hls_1_wstrm/ap_clk",
-              "MVAU_hls_1_wstrm/ap_clk2x"
+              "MVAU_hls_1_wstrm_sfidx/ap_clk",
+              "MVAU_hls_1_wstrm_sfidx/ap_clk2x",
+              "MVAU_hls_1_wstrm_val/ap_clk",
+              "MVAU_hls_1_wstrm_val/ap_clk2x",
+              "MVAU_hls_1_wstrm_mask/ap_clk",
+              "MVAU_hls_1_wstrm_mask/ap_clk2x",
+              "MVAU_hls_1_wstrm_rowlen/ap_clk",
+              "MVAU_hls_1_wstrm_rowlen/ap_clk2x"
             ]
           },
           "ap_rst_n_1": {
             "ports": [
               "ap_rst_n",
               "MVAU_hls_1/ap_rst_n",
-              "MVAU_hls_1_wstrm/ap_rst_n"
+              "MVAU_hls_1_wstrm_sfidx/ap_rst_n",
+              "MVAU_hls_1_wstrm_val/ap_rst_n",
+              "MVAU_hls_1_wstrm_mask/ap_rst_n",
+              "MVAU_hls_1_wstrm_rowlen/ap_rst_n"
             ]
           }
         }
@@ -1710,6 +4207,26 @@
             "mode": "Slave",
             "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
             "vlnv": "xilinx.com:interface:axis_rtl:1.0"
+          },
+          "s_axilite_sfidx": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+          },
+          "s_axilite_val": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+          },
+          "s_axilite_mask": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+          },
+          "s_axilite_rowlen": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
           }
         },
         "ports": {
@@ -1729,14 +4246,14 @@
             "xci_path": "ip/finn_design_MVAU_hls_2_0/finn_design_MVAU_hls_2_0.xci",
             "inst_hier_path": "MVAU_hls_2/MVAU_hls_2"
           },
-          "MVAU_hls_2_wstrm": {
-            "vlnv": "xilinx.com:module_ref:MVAU_hls_2_memstream_wrapper:1.0",
-            "xci_name": "finn_design_MVAU_hls_2_wstrm_0",
-            "xci_path": "ip/finn_design_MVAU_hls_2_wstrm_0/finn_design_MVAU_hls_2_wstrm_0.xci",
-            "inst_hier_path": "MVAU_hls_2/MVAU_hls_2_wstrm",
+          "MVAU_hls_2_wstrm_sfidx": {
+            "vlnv": "xilinx.com:module_ref:MVAU_hls_2_sfidx_memstream_wrapper:1.0",
+            "xci_name": "finn_design_MVAU_hls_2_wstrm_sfidx_0",
+            "xci_path": "ip/finn_design_MVAU_hls_2_wstrm_sfidx_0/finn_design_MVAU_hls_2_wstrm_sfidx_0.xci",
+            "inst_hier_path": "MVAU_hls_2/MVAU_hls_2_wstrm_sfidx",
             "reference_info": {
               "ref_type": "hdl",
-              "ref_name": "MVAU_hls_2_memstream_wrapper",
+              "ref_name": "MVAU_hls_2_sfidx_memstream_wrapper",
               "boundary_crc": "0x0"
             },
             "interface_ports": {
@@ -1888,7 +4405,7 @@
                     "value_src": "constant"
                   },
                   "ADDR_WIDTH": {
-                    "value": "14",
+                    "value": "8",
                     "value_src": "auto"
                   },
                   "AWUSER_WIDTH": {
@@ -1977,7 +4494,7 @@
                   "AWADDR": {
                     "physical_name": "s_axilite_AWADDR",
                     "direction": "I",
-                    "left": "13",
+                    "left": "7",
                     "right": "0"
                   },
                   "AWPROT": {
@@ -2031,7 +4548,1180 @@
                   "ARADDR": {
                     "physical_name": "s_axilite_ARADDR",
                     "direction": "I",
-                    "left": "13",
+                    "left": "7",
+                    "right": "0"
+                  },
+                  "ARPROT": {
+                    "physical_name": "s_axilite_ARPROT",
+                    "direction": "I",
+                    "left": "2",
+                    "right": "0"
+                  },
+                  "ARVALID": {
+                    "physical_name": "s_axilite_ARVALID",
+                    "direction": "I"
+                  },
+                  "ARREADY": {
+                    "physical_name": "s_axilite_ARREADY",
+                    "direction": "O"
+                  },
+                  "RDATA": {
+                    "physical_name": "s_axilite_RDATA",
+                    "direction": "O",
+                    "left": "31",
+                    "right": "0"
+                  },
+                  "RRESP": {
+                    "physical_name": "s_axilite_RRESP",
+                    "direction": "O",
+                    "left": "1",
+                    "right": "0"
+                  },
+                  "RVALID": {
+                    "physical_name": "s_axilite_RVALID",
+                    "direction": "O"
+                  },
+                  "RREADY": {
+                    "physical_name": "s_axilite_RREADY",
+                    "direction": "I"
+                  }
+                }
+              }
+            },
+            "ports": {
+              "ap_clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_BUSIF": {
+                    "value": "s_axilite:s_axis_0:m_axis_0",
+                    "value_src": "constant"
+                  },
+                  "ASSOCIATED_RESET": {
+                    "value": "ap_rst_n",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "ap_clk2x": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "ap_rst_n": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "constant"
+                  }
+                }
+              }
+            }
+          },
+          "MVAU_hls_2_wstrm_val": {
+            "vlnv": "xilinx.com:module_ref:MVAU_hls_2_val_memstream_wrapper:1.0",
+            "xci_name": "finn_design_MVAU_hls_2_wstrm_val_0",
+            "xci_path": "ip/finn_design_MVAU_hls_2_wstrm_val_0/finn_design_MVAU_hls_2_wstrm_val_0.xci",
+            "inst_hier_path": "MVAU_hls_2/MVAU_hls_2_wstrm_val",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "MVAU_hls_2_val_memstream_wrapper",
+              "boundary_crc": "0x0"
+            },
+            "interface_ports": {
+              "m_axis_0": {
+                "mode": "Master",
+                "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                "parameters": {
+                  "TDATA_NUM_BYTES": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "TDEST_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TREADY": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_TSTRB": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TKEEP": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TLAST": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "port_maps": {
+                  "TDATA": {
+                    "physical_name": "m_axis_0_tdata",
+                    "direction": "O",
+                    "left": "7",
+                    "right": "0"
+                  },
+                  "TVALID": {
+                    "physical_name": "m_axis_0_tvalid",
+                    "direction": "O"
+                  },
+                  "TREADY": {
+                    "physical_name": "m_axis_0_tready",
+                    "direction": "I"
+                  }
+                }
+              },
+              "s_axis_0": {
+                "mode": "Slave",
+                "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                "parameters": {
+                  "TDATA_NUM_BYTES": {
+                    "value": "0",
+                    "value_src": "auto"
+                  },
+                  "TDEST_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TREADY": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_TSTRB": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TKEEP": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TLAST": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "port_maps": {
+                  "TDATA": {
+                    "physical_name": "s_axis_0_tdata",
+                    "direction": "I",
+                    "left": "0",
+                    "right": "0"
+                  },
+                  "TVALID": {
+                    "physical_name": "s_axis_0_tvalid",
+                    "direction": "I"
+                  },
+                  "TREADY": {
+                    "physical_name": "s_axis_0_tready",
+                    "direction": "O"
+                  }
+                }
+              },
+              "s_axilite": {
+                "mode": "Slave",
+                "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+                "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+                "parameters": {
+                  "DATA_WIDTH": {
+                    "value": "32",
+                    "value_src": "constant"
+                  },
+                  "PROTOCOL": {
+                    "value": "AXI4LITE",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "ID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "ADDR_WIDTH": {
+                    "value": "8",
+                    "value_src": "auto"
+                  },
+                  "AWUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "ARUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "WUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "RUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "BUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "READ_WRITE_MODE": {
+                    "value": "READ_WRITE",
+                    "value_src": "constant"
+                  },
+                  "HAS_BURST": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_LOCK": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_PROT": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_CACHE": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_QOS": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_REGION": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_WSTRB": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_BRESP": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_RRESP": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "SUPPORTS_NARROW_BURST": {
+                    "value": "0",
+                    "value_src": "auto"
+                  },
+                  "NUM_READ_OUTSTANDING": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "NUM_WRITE_OUTSTANDING": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "MAX_BURST_LENGTH": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "memory_map_ref": "s_axilite",
+                "port_maps": {
+                  "AWADDR": {
+                    "physical_name": "s_axilite_AWADDR",
+                    "direction": "I",
+                    "left": "7",
+                    "right": "0"
+                  },
+                  "AWPROT": {
+                    "physical_name": "s_axilite_AWPROT",
+                    "direction": "I",
+                    "left": "2",
+                    "right": "0"
+                  },
+                  "AWVALID": {
+                    "physical_name": "s_axilite_AWVALID",
+                    "direction": "I"
+                  },
+                  "AWREADY": {
+                    "physical_name": "s_axilite_AWREADY",
+                    "direction": "O"
+                  },
+                  "WDATA": {
+                    "physical_name": "s_axilite_WDATA",
+                    "direction": "I",
+                    "left": "31",
+                    "right": "0"
+                  },
+                  "WSTRB": {
+                    "physical_name": "s_axilite_WSTRB",
+                    "direction": "I",
+                    "left": "3",
+                    "right": "0"
+                  },
+                  "WVALID": {
+                    "physical_name": "s_axilite_WVALID",
+                    "direction": "I"
+                  },
+                  "WREADY": {
+                    "physical_name": "s_axilite_WREADY",
+                    "direction": "O"
+                  },
+                  "BRESP": {
+                    "physical_name": "s_axilite_BRESP",
+                    "direction": "O",
+                    "left": "1",
+                    "right": "0"
+                  },
+                  "BVALID": {
+                    "physical_name": "s_axilite_BVALID",
+                    "direction": "O"
+                  },
+                  "BREADY": {
+                    "physical_name": "s_axilite_BREADY",
+                    "direction": "I"
+                  },
+                  "ARADDR": {
+                    "physical_name": "s_axilite_ARADDR",
+                    "direction": "I",
+                    "left": "7",
+                    "right": "0"
+                  },
+                  "ARPROT": {
+                    "physical_name": "s_axilite_ARPROT",
+                    "direction": "I",
+                    "left": "2",
+                    "right": "0"
+                  },
+                  "ARVALID": {
+                    "physical_name": "s_axilite_ARVALID",
+                    "direction": "I"
+                  },
+                  "ARREADY": {
+                    "physical_name": "s_axilite_ARREADY",
+                    "direction": "O"
+                  },
+                  "RDATA": {
+                    "physical_name": "s_axilite_RDATA",
+                    "direction": "O",
+                    "left": "31",
+                    "right": "0"
+                  },
+                  "RRESP": {
+                    "physical_name": "s_axilite_RRESP",
+                    "direction": "O",
+                    "left": "1",
+                    "right": "0"
+                  },
+                  "RVALID": {
+                    "physical_name": "s_axilite_RVALID",
+                    "direction": "O"
+                  },
+                  "RREADY": {
+                    "physical_name": "s_axilite_RREADY",
+                    "direction": "I"
+                  }
+                }
+              }
+            },
+            "ports": {
+              "ap_clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_BUSIF": {
+                    "value": "s_axilite:s_axis_0:m_axis_0",
+                    "value_src": "constant"
+                  },
+                  "ASSOCIATED_RESET": {
+                    "value": "ap_rst_n",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "ap_clk2x": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "ap_rst_n": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "constant"
+                  }
+                }
+              }
+            }
+          },
+          "MVAU_hls_2_wstrm_mask": {
+            "vlnv": "xilinx.com:module_ref:MVAU_hls_2_mask_memstream_wrapper:1.0",
+            "xci_name": "finn_design_MVAU_hls_2_wstrm_mask_0",
+            "xci_path": "ip/finn_design_MVAU_hls_2_wstrm_mask_0/finn_design_MVAU_hls_2_wstrm_mask_0.xci",
+            "inst_hier_path": "MVAU_hls_2/MVAU_hls_2_wstrm_mask",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "MVAU_hls_2_mask_memstream_wrapper",
+              "boundary_crc": "0x0"
+            },
+            "interface_ports": {
+              "m_axis_0": {
+                "mode": "Master",
+                "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                "parameters": {
+                  "TDATA_NUM_BYTES": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "TDEST_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TREADY": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_TSTRB": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TKEEP": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TLAST": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "port_maps": {
+                  "TDATA": {
+                    "physical_name": "m_axis_0_tdata",
+                    "direction": "O",
+                    "left": "7",
+                    "right": "0"
+                  },
+                  "TVALID": {
+                    "physical_name": "m_axis_0_tvalid",
+                    "direction": "O"
+                  },
+                  "TREADY": {
+                    "physical_name": "m_axis_0_tready",
+                    "direction": "I"
+                  }
+                }
+              },
+              "s_axis_0": {
+                "mode": "Slave",
+                "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                "parameters": {
+                  "TDATA_NUM_BYTES": {
+                    "value": "0",
+                    "value_src": "auto"
+                  },
+                  "TDEST_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TREADY": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_TSTRB": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TKEEP": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TLAST": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "port_maps": {
+                  "TDATA": {
+                    "physical_name": "s_axis_0_tdata",
+                    "direction": "I",
+                    "left": "0",
+                    "right": "0"
+                  },
+                  "TVALID": {
+                    "physical_name": "s_axis_0_tvalid",
+                    "direction": "I"
+                  },
+                  "TREADY": {
+                    "physical_name": "s_axis_0_tready",
+                    "direction": "O"
+                  }
+                }
+              },
+              "s_axilite": {
+                "mode": "Slave",
+                "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+                "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+                "parameters": {
+                  "DATA_WIDTH": {
+                    "value": "32",
+                    "value_src": "constant"
+                  },
+                  "PROTOCOL": {
+                    "value": "AXI4LITE",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "ID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "ADDR_WIDTH": {
+                    "value": "8",
+                    "value_src": "auto"
+                  },
+                  "AWUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "ARUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "WUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "RUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "BUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "READ_WRITE_MODE": {
+                    "value": "READ_WRITE",
+                    "value_src": "constant"
+                  },
+                  "HAS_BURST": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_LOCK": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_PROT": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_CACHE": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_QOS": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_REGION": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_WSTRB": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_BRESP": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_RRESP": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "SUPPORTS_NARROW_BURST": {
+                    "value": "0",
+                    "value_src": "auto"
+                  },
+                  "NUM_READ_OUTSTANDING": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "NUM_WRITE_OUTSTANDING": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "MAX_BURST_LENGTH": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "memory_map_ref": "s_axilite",
+                "port_maps": {
+                  "AWADDR": {
+                    "physical_name": "s_axilite_AWADDR",
+                    "direction": "I",
+                    "left": "7",
+                    "right": "0"
+                  },
+                  "AWPROT": {
+                    "physical_name": "s_axilite_AWPROT",
+                    "direction": "I",
+                    "left": "2",
+                    "right": "0"
+                  },
+                  "AWVALID": {
+                    "physical_name": "s_axilite_AWVALID",
+                    "direction": "I"
+                  },
+                  "AWREADY": {
+                    "physical_name": "s_axilite_AWREADY",
+                    "direction": "O"
+                  },
+                  "WDATA": {
+                    "physical_name": "s_axilite_WDATA",
+                    "direction": "I",
+                    "left": "31",
+                    "right": "0"
+                  },
+                  "WSTRB": {
+                    "physical_name": "s_axilite_WSTRB",
+                    "direction": "I",
+                    "left": "3",
+                    "right": "0"
+                  },
+                  "WVALID": {
+                    "physical_name": "s_axilite_WVALID",
+                    "direction": "I"
+                  },
+                  "WREADY": {
+                    "physical_name": "s_axilite_WREADY",
+                    "direction": "O"
+                  },
+                  "BRESP": {
+                    "physical_name": "s_axilite_BRESP",
+                    "direction": "O",
+                    "left": "1",
+                    "right": "0"
+                  },
+                  "BVALID": {
+                    "physical_name": "s_axilite_BVALID",
+                    "direction": "O"
+                  },
+                  "BREADY": {
+                    "physical_name": "s_axilite_BREADY",
+                    "direction": "I"
+                  },
+                  "ARADDR": {
+                    "physical_name": "s_axilite_ARADDR",
+                    "direction": "I",
+                    "left": "7",
+                    "right": "0"
+                  },
+                  "ARPROT": {
+                    "physical_name": "s_axilite_ARPROT",
+                    "direction": "I",
+                    "left": "2",
+                    "right": "0"
+                  },
+                  "ARVALID": {
+                    "physical_name": "s_axilite_ARVALID",
+                    "direction": "I"
+                  },
+                  "ARREADY": {
+                    "physical_name": "s_axilite_ARREADY",
+                    "direction": "O"
+                  },
+                  "RDATA": {
+                    "physical_name": "s_axilite_RDATA",
+                    "direction": "O",
+                    "left": "31",
+                    "right": "0"
+                  },
+                  "RRESP": {
+                    "physical_name": "s_axilite_RRESP",
+                    "direction": "O",
+                    "left": "1",
+                    "right": "0"
+                  },
+                  "RVALID": {
+                    "physical_name": "s_axilite_RVALID",
+                    "direction": "O"
+                  },
+                  "RREADY": {
+                    "physical_name": "s_axilite_RREADY",
+                    "direction": "I"
+                  }
+                }
+              }
+            },
+            "ports": {
+              "ap_clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_BUSIF": {
+                    "value": "s_axilite:s_axis_0:m_axis_0",
+                    "value_src": "constant"
+                  },
+                  "ASSOCIATED_RESET": {
+                    "value": "ap_rst_n",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "ap_clk2x": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "ap_rst_n": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "constant"
+                  }
+                }
+              }
+            }
+          },
+          "MVAU_hls_2_wstrm_rowlen": {
+            "vlnv": "xilinx.com:module_ref:MVAU_hls_2_rowlen_memstream_wrapper:1.0",
+            "xci_name": "finn_design_MVAU_hls_2_wstrm_rowlen_0",
+            "xci_path": "ip/finn_design_MVAU_hls_2_wstrm_rowlen_0/finn_design_MVAU_hls_2_wstrm_rowlen_0.xci",
+            "inst_hier_path": "MVAU_hls_2/MVAU_hls_2_wstrm_rowlen",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "MVAU_hls_2_rowlen_memstream_wrapper",
+              "boundary_crc": "0x0"
+            },
+            "interface_ports": {
+              "m_axis_0": {
+                "mode": "Master",
+                "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                "parameters": {
+                  "TDATA_NUM_BYTES": {
+                    "value": "2",
+                    "value_src": "auto"
+                  },
+                  "TDEST_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TREADY": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_TSTRB": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TKEEP": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TLAST": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "port_maps": {
+                  "TDATA": {
+                    "physical_name": "m_axis_0_tdata",
+                    "direction": "O",
+                    "left": "15",
+                    "right": "0"
+                  },
+                  "TVALID": {
+                    "physical_name": "m_axis_0_tvalid",
+                    "direction": "O"
+                  },
+                  "TREADY": {
+                    "physical_name": "m_axis_0_tready",
+                    "direction": "I"
+                  }
+                }
+              },
+              "s_axis_0": {
+                "mode": "Slave",
+                "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                "parameters": {
+                  "TDATA_NUM_BYTES": {
+                    "value": "0",
+                    "value_src": "auto"
+                  },
+                  "TDEST_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TREADY": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_TSTRB": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TKEEP": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TLAST": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "port_maps": {
+                  "TDATA": {
+                    "physical_name": "s_axis_0_tdata",
+                    "direction": "I",
+                    "left": "0",
+                    "right": "0"
+                  },
+                  "TVALID": {
+                    "physical_name": "s_axis_0_tvalid",
+                    "direction": "I"
+                  },
+                  "TREADY": {
+                    "physical_name": "s_axis_0_tready",
+                    "direction": "O"
+                  }
+                }
+              },
+              "s_axilite": {
+                "mode": "Slave",
+                "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+                "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+                "parameters": {
+                  "DATA_WIDTH": {
+                    "value": "32",
+                    "value_src": "constant"
+                  },
+                  "PROTOCOL": {
+                    "value": "AXI4LITE",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "ID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "ADDR_WIDTH": {
+                    "value": "8",
+                    "value_src": "auto"
+                  },
+                  "AWUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "ARUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "WUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "RUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "BUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "READ_WRITE_MODE": {
+                    "value": "READ_WRITE",
+                    "value_src": "constant"
+                  },
+                  "HAS_BURST": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_LOCK": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_PROT": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_CACHE": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_QOS": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_REGION": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_WSTRB": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_BRESP": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_RRESP": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "SUPPORTS_NARROW_BURST": {
+                    "value": "0",
+                    "value_src": "auto"
+                  },
+                  "NUM_READ_OUTSTANDING": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "NUM_WRITE_OUTSTANDING": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "MAX_BURST_LENGTH": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "finn_design_ap_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "memory_map_ref": "s_axilite",
+                "port_maps": {
+                  "AWADDR": {
+                    "physical_name": "s_axilite_AWADDR",
+                    "direction": "I",
+                    "left": "7",
+                    "right": "0"
+                  },
+                  "AWPROT": {
+                    "physical_name": "s_axilite_AWPROT",
+                    "direction": "I",
+                    "left": "2",
+                    "right": "0"
+                  },
+                  "AWVALID": {
+                    "physical_name": "s_axilite_AWVALID",
+                    "direction": "I"
+                  },
+                  "AWREADY": {
+                    "physical_name": "s_axilite_AWREADY",
+                    "direction": "O"
+                  },
+                  "WDATA": {
+                    "physical_name": "s_axilite_WDATA",
+                    "direction": "I",
+                    "left": "31",
+                    "right": "0"
+                  },
+                  "WSTRB": {
+                    "physical_name": "s_axilite_WSTRB",
+                    "direction": "I",
+                    "left": "3",
+                    "right": "0"
+                  },
+                  "WVALID": {
+                    "physical_name": "s_axilite_WVALID",
+                    "direction": "I"
+                  },
+                  "WREADY": {
+                    "physical_name": "s_axilite_WREADY",
+                    "direction": "O"
+                  },
+                  "BRESP": {
+                    "physical_name": "s_axilite_BRESP",
+                    "direction": "O",
+                    "left": "1",
+                    "right": "0"
+                  },
+                  "BVALID": {
+                    "physical_name": "s_axilite_BVALID",
+                    "direction": "O"
+                  },
+                  "BREADY": {
+                    "physical_name": "s_axilite_BREADY",
+                    "direction": "I"
+                  },
+                  "ARADDR": {
+                    "physical_name": "s_axilite_ARADDR",
+                    "direction": "I",
+                    "left": "7",
                     "right": "0"
                   },
                   "ARPROT": {
@@ -2128,16 +5818,58 @@
               "MVAU_hls_2/out0_V"
             ]
           },
-          "MVAU_hls_2_wstrm_m_axis_0": {
+          "MVAU_hls_2_wstrm_mask_m_axis_0": {
             "interface_ports": [
-              "MVAU_hls_2_wstrm/m_axis_0",
-              "MVAU_hls_2/in1_V"
+              "MVAU_hls_2_wstrm_mask/m_axis_0",
+              "MVAU_hls_2/mask_V"
+            ]
+          },
+          "MVAU_hls_2_wstrm_rowlen_m_axis_0": {
+            "interface_ports": [
+              "MVAU_hls_2_wstrm_rowlen/m_axis_0",
+              "MVAU_hls_2/rowlen_V"
+            ]
+          },
+          "MVAU_hls_2_wstrm_sfidx_m_axis_0": {
+            "interface_ports": [
+              "MVAU_hls_2_wstrm_sfidx/m_axis_0",
+              "MVAU_hls_2/sfidx_V"
+            ]
+          },
+          "MVAU_hls_2_wstrm_val_m_axis_0": {
+            "interface_ports": [
+              "MVAU_hls_2_wstrm_val/m_axis_0",
+              "MVAU_hls_2/val_V"
             ]
           },
           "in0_V_1": {
             "interface_ports": [
               "in0_V",
               "MVAU_hls_2/in0_V"
+            ]
+          },
+          "s_axilite_mask_1": {
+            "interface_ports": [
+              "s_axilite_mask",
+              "MVAU_hls_2_wstrm_mask/s_axilite"
+            ]
+          },
+          "s_axilite_rowlen_1": {
+            "interface_ports": [
+              "s_axilite_rowlen",
+              "MVAU_hls_2_wstrm_rowlen/s_axilite"
+            ]
+          },
+          "s_axilite_sfidx_1": {
+            "interface_ports": [
+              "s_axilite_sfidx",
+              "MVAU_hls_2_wstrm_sfidx/s_axilite"
+            ]
+          },
+          "s_axilite_val_1": {
+            "interface_ports": [
+              "s_axilite_val",
+              "MVAU_hls_2_wstrm_val/s_axilite"
             ]
           }
         },
@@ -2146,15 +5878,24 @@
             "ports": [
               "ap_clk",
               "MVAU_hls_2/ap_clk",
-              "MVAU_hls_2_wstrm/ap_clk",
-              "MVAU_hls_2_wstrm/ap_clk2x"
+              "MVAU_hls_2_wstrm_sfidx/ap_clk",
+              "MVAU_hls_2_wstrm_sfidx/ap_clk2x",
+              "MVAU_hls_2_wstrm_val/ap_clk",
+              "MVAU_hls_2_wstrm_val/ap_clk2x",
+              "MVAU_hls_2_wstrm_mask/ap_clk",
+              "MVAU_hls_2_wstrm_mask/ap_clk2x",
+              "MVAU_hls_2_wstrm_rowlen/ap_clk",
+              "MVAU_hls_2_wstrm_rowlen/ap_clk2x"
             ]
           },
           "ap_rst_n_1": {
             "ports": [
               "ap_rst_n",
               "MVAU_hls_2/ap_rst_n",
-              "MVAU_hls_2_wstrm/ap_rst_n"
+              "MVAU_hls_2_wstrm_sfidx/ap_rst_n",
+              "MVAU_hls_2_wstrm_val/ap_rst_n",
+              "MVAU_hls_2_wstrm_mask/ap_rst_n",
+              "MVAU_hls_2_wstrm_rowlen/ap_rst_n"
             ]
           }
         }

@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Sun Nov  9 20:50:11 2025
+//Date        : Mon Nov 10 16:58:04 2025
 //Host        : finn_dev_changhong running 64-bit Ubuntu 22.04.1 LTS
 //Command     : generate_target finn_design_wrapper.bd
 //Design      : finn_design_wrapper

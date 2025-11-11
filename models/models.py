@@ -83,3 +83,5 @@ class CybSecMLPForExport(nn.Module):
         out_original = self.pretrained(x)
         out_final = self.qnt_output(out_original)       
         return out_final
+    
+

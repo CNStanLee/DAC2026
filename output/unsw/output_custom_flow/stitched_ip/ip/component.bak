@@ -256,7 +256,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>a378322a</spirit:value>
+            <spirit:value>1be1a807</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -284,7 +284,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>addc0018</spirit:value>
+            <spirit:value>5d56ac78</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -469,11 +469,38 @@
         <spirit:fileType>systemVerilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog/rtl_ops/MVAU_hls_0/MVAU_hls_0_memstream_wrapper.v</spirit:name>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_0/MVAU_hls_0_sfidx_memstream_wrapper.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_design_MVAU_hls_0_wstrm_0.v</spirit:name>
+        <spirit:name>src/finn_design_MVAU_hls_0_wstrm_sfidx_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_0/MVAU_hls_0_val_memstream_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/finn_design_MVAU_hls_0_wstrm_val_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_0/MVAU_hls_0_mask_memstream_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/finn_design_MVAU_hls_0_wstrm_mask_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_0/MVAU_hls_0_rowlen_memstream_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/finn_design_MVAU_hls_0_wstrm_rowlen_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
@@ -494,11 +521,38 @@
         <spirit:userFileType>CELL_NAME_MVAU_hls_1/MVAU_hls_1</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog/rtl_ops/MVAU_hls_1/MVAU_hls_1_memstream_wrapper.v</spirit:name>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_1/MVAU_hls_1_sfidx_memstream_wrapper.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_design_MVAU_hls_1_wstrm_0.v</spirit:name>
+        <spirit:name>src/finn_design_MVAU_hls_1_wstrm_sfidx_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_1/MVAU_hls_1_val_memstream_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/finn_design_MVAU_hls_1_wstrm_val_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_1/MVAU_hls_1_mask_memstream_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/finn_design_MVAU_hls_1_wstrm_mask_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_1/MVAU_hls_1_rowlen_memstream_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/finn_design_MVAU_hls_1_wstrm_rowlen_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
@@ -519,11 +573,38 @@
         <spirit:userFileType>CELL_NAME_MVAU_hls_2/MVAU_hls_2</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog/rtl_ops/MVAU_hls_2/MVAU_hls_2_memstream_wrapper.v</spirit:name>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_2/MVAU_hls_2_sfidx_memstream_wrapper.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_design_MVAU_hls_2_wstrm_0.v</spirit:name>
+        <spirit:name>src/finn_design_MVAU_hls_2_wstrm_sfidx_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_2/MVAU_hls_2_val_memstream_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/finn_design_MVAU_hls_2_wstrm_val_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_2/MVAU_hls_2_mask_memstream_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/finn_design_MVAU_hls_2_wstrm_mask_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_2/MVAU_hls_2_rowlen_memstream_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/finn_design_MVAU_hls_2_wstrm_rowlen_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
@@ -572,7 +653,7 @@
       <spirit:file>
         <spirit:name>src/finn_design.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_dab76cf7</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_66309eba</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -652,11 +733,38 @@
         <spirit:fileType>systemVerilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog/rtl_ops/MVAU_hls_0/MVAU_hls_0_memstream_wrapper.v</spirit:name>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_0/MVAU_hls_0_sfidx_memstream_wrapper.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>sim/finn_design_MVAU_hls_0_wstrm_0.v</spirit:name>
+        <spirit:name>sim/finn_design_MVAU_hls_0_wstrm_sfidx_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_0/MVAU_hls_0_val_memstream_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sim/finn_design_MVAU_hls_0_wstrm_val_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_0/MVAU_hls_0_mask_memstream_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sim/finn_design_MVAU_hls_0_wstrm_mask_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_0/MVAU_hls_0_rowlen_memstream_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sim/finn_design_MVAU_hls_0_wstrm_rowlen_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
@@ -677,11 +785,38 @@
         <spirit:userFileType>CELL_NAME_MVAU_hls_1/MVAU_hls_1</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog/rtl_ops/MVAU_hls_1/MVAU_hls_1_memstream_wrapper.v</spirit:name>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_1/MVAU_hls_1_sfidx_memstream_wrapper.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>sim/finn_design_MVAU_hls_1_wstrm_0.v</spirit:name>
+        <spirit:name>sim/finn_design_MVAU_hls_1_wstrm_sfidx_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_1/MVAU_hls_1_val_memstream_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sim/finn_design_MVAU_hls_1_wstrm_val_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_1/MVAU_hls_1_mask_memstream_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sim/finn_design_MVAU_hls_1_wstrm_mask_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_1/MVAU_hls_1_rowlen_memstream_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sim/finn_design_MVAU_hls_1_wstrm_rowlen_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
@@ -702,11 +837,38 @@
         <spirit:userFileType>CELL_NAME_MVAU_hls_2/MVAU_hls_2</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog/rtl_ops/MVAU_hls_2/MVAU_hls_2_memstream_wrapper.v</spirit:name>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_2/MVAU_hls_2_sfidx_memstream_wrapper.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>sim/finn_design_MVAU_hls_2_wstrm_0.v</spirit:name>
+        <spirit:name>sim/finn_design_MVAU_hls_2_wstrm_sfidx_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_2/MVAU_hls_2_val_memstream_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sim/finn_design_MVAU_hls_2_wstrm_val_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_2/MVAU_hls_2_mask_memstream_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sim/finn_design_MVAU_hls_2_wstrm_mask_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog/rtl_ops/MVAU_hls_2/MVAU_hls_2_rowlen_memstream_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sim/finn_design_MVAU_hls_2_wstrm_rowlen_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
@@ -830,7 +992,7 @@
       <xilinx:displayName>finn_design_v1_0</xilinx:displayName>
       <xilinx:definitionSource>IPI</xilinx:definitionSource>
       <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-11-09T20:50:11Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2025-11-10T16:58:04Z</xilinx:coreCreationDateTime>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.AP_CLK.FREQ_HZ" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_0.FREQ_HZ" xilinx:valuePermission="bd"/>
@@ -860,7 +1022,7 @@
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="d71bf89a"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="f98b68c8"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="362336d2"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="b7df028c"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="c89a5ebc"/>
       <xilinx:targetDRCs>

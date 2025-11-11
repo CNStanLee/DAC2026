@@ -2,7 +2,7 @@
   "Defaults": {},
   "StreamingFIFO_rtl_0": {
     "ram_style": "auto",
-    "depth": 32,
+    "depth": 2,
     "impl_style": "rtl",
     "inFIFODepths": [
       0
@@ -19,15 +19,15 @@
     "mem_mode": "internal_decoupled",
     "runtime_writeable_weights": 0,
     "inFIFODepths": [
-      32
+      2
     ],
     "outFIFODepths": [
-      32
+      2
     ]
   },
   "StreamingFIFO_rtl_1": {
     "ram_style": "auto",
-    "depth": 32,
+    "depth": 2,
     "impl_style": "rtl",
     "inFIFODepths": [
       0
@@ -44,7 +44,7 @@
     "mem_mode": "internal_decoupled",
     "runtime_writeable_weights": 0,
     "inFIFODepths": [
-      32
+      2
     ],
     "outFIFODepths": [
       2

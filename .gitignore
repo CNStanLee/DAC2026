@@ -1,0 +1,7 @@
+*.npz
+*.pth
+*.tar.gz
+data/
+model/checkpoints/
+output/
+acc_configs/

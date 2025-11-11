@@ -37,8 +37,8 @@ input   ap_clk,
 (* X_INTERFACE_PARAMETER = "POLARITY ACTIVE_LOW" *)
 input   ap_rst_n,
 
-output [5:0] count,
-output [5:0] maxcount,
+output [1:0] count,
+output [1:0] maxcount,
 
 //- AXI Stream - Input --------------
 output   in0_V_TREADY,
@@ -55,7 +55,7 @@ output  [7:0] out0_V_TDATA
 
 	case(fifo_core)
 	"sim_fifo_gauge":
-		fifo_gauge #(.WIDTH(8), .COUNT_WIDTH(6)) fifo (
+		fifo_gauge #(.WIDTH(8), .COUNT_WIDTH(2)) fifo (
 			.clk(ap_clk), .rst(!ap_rst_n),
 			.idat(in0_V_TDATA), .ivld(in0_V_TVALID), .irdy(in0_V_TREADY),
 			.odat(out0_V_TDATA), .ovld(out0_V_TVALID), .ordy(out0_V_TREADY),
@@ -63,7 +63,7 @@ output  [7:0] out0_V_TDATA
 		);
 	"q_srl":
 		Q_srl #(
-		.depth(32),
+		.depth(2),
 		.width(8)
 		)
 		impl
