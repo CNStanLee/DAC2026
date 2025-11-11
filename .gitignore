@@ -5,3 +5,4 @@ data/
 model/checkpoints/
 output/
 acc_configs/
+.vscode/
