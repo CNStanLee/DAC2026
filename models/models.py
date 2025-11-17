@@ -85,3 +85,12 @@ class CybSecMLPForExport(nn.Module):
         return out_final
     
 
+def single_layer(w, a, size):         
+
+    model = nn.Sequential(
+        QuantLinear(size, size, bias=True, weight_bit_width=w),
+        # nn.BatchNorm1d(size),
+        QuantReLU(bit_width=a),
+    )
+
+    return model

@@ -6,22 +6,22 @@
 
 source /tools/Xilinx/Vitis_HLS/2022.2/scripts/vitis_hls/hls.tcl -notrace
 INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'changhong' on host 'changhong-Alienware-m16-R2' (Linux_x86_64 version 6.8.0-85-generic) on Wed Oct 29 21:58:52 GMT 2025
+INFO: [HLS 200-10] For user 'changhong' on host 'changhong-Dell-Pro-Max-Tower-T2-FCT2250' (Linux_x86_64 version 6.8.0-60-generic) on Tue Nov 11 13:51:32 GMT 2025
 INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
-INFO: [HLS 200-10] In directory '/home/changhong/prj/finn_dev_branch/finn/script/DAC2026/spmm'
-Sourcing Tcl script 'test_mvau_stream.tcl'
-INFO: [HLS 200-1510] Running: source test_mvau_stream.tcl
-test_mvau_stream.tcl can't be opened.
-couldn't read file "test_mvau_stream.tcl": no such file or directory
+INFO: [HLS 200-10] In directory '/home/changhong/prj/finn_cli_fork/scripts/DAC2026/spmm'
+Sourcing Tcl script 'test_mvau_static.tcl'
+INFO: [HLS 200-1510] Running: source test_mvau_static.tcl
+test_mvau_static.tcl can't be opened.
+couldn't read file "test_mvau_static.tcl": no such file or directory
     while executing
-"source test_mvau_stream.tcl"
+"source test_mvau_static.tcl"
     invoked from within
-"hls::main test_mvau_stream.tcl"
+"hls::main test_mvau_static.tcl"
     ("uplevel" body line 1)
     invoked from within
 "uplevel 1 hls::main {*}$newargs"
     (procedure "hls_proc" line 16)
     invoked from within
 "hls_proc [info nameofexecutable] $argv"
-INFO: [HLS 200-112] Total CPU user time: 0.43 seconds. Total CPU system time: 0.05 seconds. Total elapsed time: 0.36 seconds; peak allocated memory: 98.832 MB.
-INFO: [Common 17-206] Exiting vitis_hls at Wed Oct 29 21:58:52 2025...
+INFO: [HLS 200-112] Total CPU user time: 0.3 seconds. Total CPU system time: 0.07 seconds. Total elapsed time: 0.28 seconds; peak allocated memory: 98.906 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Tue Nov 11 13:51:32 2025...

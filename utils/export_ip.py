@@ -63,10 +63,50 @@ def finn_export_ip(brevitas_model,
         synth_clk_period_ns = synth_clk_period_ns,
         fpga_part           = fpga_part,
         steps               = steps,
+        verbose            = True,
         generate_outputs=[
+            build_cfg.DataflowOutputType.ESTIMATE_REPORTS,
             build_cfg.DataflowOutputType.STITCHED_IP,
             build_cfg.DataflowOutputType.RTLSIM_PERFORMANCE,
             build_cfg.DataflowOutputType.OOC_SYNTH,
         ]
     )
     build.build_dataflow_cfg(brevitas_model, cfg_stitched_ip)
+
+def finn_export_acc(brevitas_model,
+                    output_dir,
+                     mvau_wwidth_max=80,
+                      target_fps=10000,
+                        synth_clk_period_ns=10.0,
+                            board="ZCU104",
+                             steps = build_cfg.dense_dataflow_steps
+                    ):
+    '''
+    brevitas_model (onnx): trained Brevitas model to be exported to FINN IP
+    output_dir (str): directory to save the exported IP
+    '''
+    #Delete previous run results if exist
+    if os.path.exists(output_dir):
+        shutil.rmtree(output_dir)
+        print("Previous run results deleted!")
+
+    cfg_deployment = build.DataflowBuildConfig(
+        output_dir          = output_dir,
+        mvau_wwidth_max     = mvau_wwidth_max,
+        target_fps          = target_fps,
+        synth_clk_period_ns = synth_clk_period_ns,
+        board               = board,
+        steps               = steps,
+        # verbose            = True,
+        # shell_flow_type     = build_cfg.ShellFlowType.VIVADO_ZYNQ,
+        generate_outputs=[
+            build_cfg.DataflowOutputType.ESTIMATE_REPORTS,
+            build_cfg.DataflowOutputType.STITCHED_IP,
+            build_cfg.DataflowOutputType.RTLSIM_PERFORMANCE,
+            build_cfg.DataflowOutputType.OOC_SYNTH,
+            #build_cfg.DataflowOutputType.BITFILE,
+            #build_cfg.DataflowOutputType.PYNQ_DRIVER,
+            #build_cfg.DataflowOutputType.DEPLOYMENT_PACKAGE,
+        ]
+    )
+    build.build_dataflow_cfg(brevitas_model, cfg_deployment)

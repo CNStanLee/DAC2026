@@ -105,11 +105,13 @@ def unsw_nb15_estimate_ip():
 
     cfg_estimates = build.DataflowBuildConfig(
         output_dir          = estimates_output_dir,
-        mvau_wwidth_max     = 80,
-        target_fps          = 1000000,
-        synth_clk_period_ns = 10.0,
-        fpga_part           = "xc7z020clg400-1",
-        steps               = build_cfg.estimate_only_dataflow_steps,
+        mvau_wwidth_max     = 10000,
+        target_fps          = 10000000,
+        synth_clk_period_ns = 2.0,
+        fpga_part           = "xczu7ev-ffvc1156-2-e",#"xc7z020clg400-1",
+        # steps               = build_cfg.estimate_only_dataflow_steps,
+        steps               = build_cfg.hybridsp_estimate_steps,
+        verbose            = True,
         generate_outputs=[
             build_cfg.DataflowOutputType.ESTIMATE_REPORTS,
         ]
@@ -157,11 +159,13 @@ def unsw_nb15_export_ip():
 
     cfg_stitched_ip = build.DataflowBuildConfig(
         output_dir          = rtlsim_output_dir,
-        mvau_wwidth_max     = 80,
+        mvau_wwidth_max     = 10000,
         target_fps          = 1000000,
         synth_clk_period_ns = 10.0,
-        fpga_part           = "xc7z020clg400-1",
+        # fpga_part           = "xc7z020clg400-1",
+        fpga_part           = "xczu7ev-ffvc1156-2-e",
         generate_outputs=[
+            build_cfg.DataflowOutputType.ESTIMATE_REPORTS,
             build_cfg.DataflowOutputType.STITCHED_IP,
             build_cfg.DataflowOutputType.RTLSIM_PERFORMANCE,
             build_cfg.DataflowOutputType.OOC_SYNTH,
@@ -171,13 +175,18 @@ def unsw_nb15_export_ip():
 
 def unsw_nb15_experiment():
     # unsw_nb15_padding_model() # Run this only once to create the padded model
-    unsw_nb15_dense_model = unsw_nb15_test_model()
-    analyze_model_sparsity(unsw_nb15_dense_model)
-    unsw_nb15_sparse_model = global_magnitude_prune_with_min(unsw_nb15_dense_model, target_sparsity=0.92)
-    analyze_model_sparsity(unsw_nb15_sparse_model)
-    unsw_nb15_export_onnx(unsw_nb15_sparse_model)
-    unsw_nb15_custom_flow()
-    # unsw_nb15_estimate_ip()
+
+
+
+    # unsw_nb15_dense_model = unsw_nb15_test_model()
+    # analyze_model_sparsity(unsw_nb15_dense_model)
+    # unsw_nb15_sparse_model = global_magnitude_prune_with_min(unsw_nb15_dense_model, target_sparsity=0.92)
+    # analyze_model_sparsity(unsw_nb15_sparse_model)
+    # unsw_nb15_export_onnx(unsw_nb15_sparse_model)
+
+
+    # unsw_nb15_custom_flow()
+    unsw_nb15_estimate_ip()
     # unsw_nb15_export_ip()
     print("finished UNSW-NB15 experiment.")
 if __name__ == "__main__":

@@ -6,3 +6,5 @@ model/checkpoints/
 output/
 acc_configs/
 .vscode/
+logs/
+models/ablation/

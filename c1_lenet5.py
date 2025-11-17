@@ -34,7 +34,7 @@ def lenet5_experiment():
     # load pretrained weights
     model.load_state_dict(torch.load("models/checkpoints/lenet5_w4a4.pth"))
     analyze_model_sparsity(model)
-    sparse_model = global_magnitude_prune_with_min(model, 0.91)
+    sparse_model = global_magnitude_prune_with_min(model, 0.95)
     analyze_model_sparsity(sparse_model)
     finn_export_onnx(sparse_model.cpu(),
                       output_onnx_path="models/lenet5/lenet5_w4a4_pruned.onnx",
@@ -42,12 +42,12 @@ def lenet5_experiment():
                         input_datatype=DataType["INT8"],
                          output_datatype=DataType["INT8"])
     finn_export_ip(brevitas_model="models/lenet5/lenet5_w4a4_pruned.onnx",
-                     output_dir="output/lenet5/sparse",
+                     output_dir="output/lenet5/sparse_final_hybrid_ip",
                       mvau_wwidth_max=10000,
-                       target_fps=10000,
+                       target_fps=300000,
                         synth_clk_period_ns=10.0,
                          fpga_part="xc7z020clg400-1",
-                             steps = build_cfg.custom_dataflow_steps
+                             steps = build_cfg.hybridsp_dataflow_steps
                             #steps = build_cfg.dense_dataflow_steps
                      )
     # generate the accelerator IP

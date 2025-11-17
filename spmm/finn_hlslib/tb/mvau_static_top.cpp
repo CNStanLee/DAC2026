@@ -12,27 +12,51 @@ using namespace hls;
 #include "data/mvau_config.h"
 #include "data/mvau_params.h" // must define: object `weights` and object `activation`
 
+// template<
+//   unsigned MatrixW, unsigned MatrixH, unsigned SIMD, unsigned PE, unsigned MMV,
+//   typename TSrcI, typename TDstI, typename TWeightI, typename TW, typename TA, typename R
+// >
+// void Testbench_mvau_static(stream< ap_uint<MMV * SIMD * TSrcI::width> > &in,
+//                            stream< ap_uint<MMV * PE   * TDstI::width> > &out,
+//                            TW const &weights_obj,
+//                            TA const &activation_obj,
+//                            const unsigned int numReps) {
+//   typedef ap_uint<MMV * SIMD * TSrcI::width> TI;
+//   typedef ap_uint<MMV * PE * TDstI::width>   TO;
+
+//   R r;
+
+//   Matrix_Vector_Activate_Batch<
+//     MatrixW, MatrixH, SIMD, PE, MMV,
+//     TSrcI, TDstI, TWeightI,
+//     TI, TO,
+//     TW, TA, R
+//   >(in, out, weights_obj, activation_obj, numReps, r);
+// }
+
+// 原来的 template 声明改成带前缀的名字
 template<
-  unsigned MatrixW, unsigned MatrixH, unsigned SIMD, unsigned PE, unsigned MMV,
+  unsigned TMatrixW, unsigned TMatrixH, unsigned TSIMD, unsigned TPE, unsigned TMMV,
   typename TSrcI, typename TDstI, typename TWeightI, typename TW, typename TA, typename R
 >
-void Testbench_mvau_static(stream< ap_uint<MMV * SIMD * TSrcI::width> > &in,
-                           stream< ap_uint<MMV * PE   * TDstI::width> > &out,
+void Testbench_mvau_static(stream< ap_uint<TMMV * TSIMD * TSrcI::width> > &in,
+                           stream< ap_uint<TMMV * TPE   * TDstI::width> > &out,
                            TW const &weights_obj,
                            TA const &activation_obj,
                            const unsigned int numReps) {
-  typedef ap_uint<MMV * SIMD * TSrcI::width> TI;
-  typedef ap_uint<MMV * PE * TDstI::width>   TO;
+  typedef ap_uint<TMMV * TSIMD * TSrcI::width> TI;
+  typedef ap_uint<TMMV * TPE   * TDstI::width> TO;
 
   R r;
 
   Matrix_Vector_Activate_Batch<
-    MatrixW, MatrixH, SIMD, PE, MMV,
+    TMatrixW, TMatrixH, TSIMD, TPE, TMMV,
     TSrcI, TDstI, TWeightI,
     TI, TO,
     TW, TA, R
   >(in, out, weights_obj, activation_obj, numReps, r);
 }
+
 
 // Provide a default instantiation driven by mvau_config.h and params in mvau_params.h
 void Testbench_mvau_static_inst(stream< ap_uint<MMV * SIMD * TSrcI::width> > &in,
